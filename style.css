@@ -272,6 +272,22 @@ fieldset[disabled] .btn-xl.active {
     background-color: #03b9fe;
 }
 
+header .something{
+    background-attachment: scroll;
+    background-image: url(./img/header-bg.png);
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    background-position: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+}
+
 @media(min-width:768px) {
     .navbar-default {
         padding: 25px 0;
@@ -311,6 +327,13 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
+
+    header .something{
+
+      height: 500px;
+
+
+}
 }
 
 #Interests{
@@ -320,31 +343,7 @@ fieldset[disabled] .btn-xl.active {
     margin:auto;
 }
 
-header .something{
-    /*color: #fff;*/
-    background-attachment: scroll;
-    background-image: url(./img/header-bg.png);
-    /*background-position: center center;*/
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
 
-      height: 500px;
-  position: relative;
-  overflow: hidden;
-  background-color: #000;
-
-    background-size: cover;
-    background-position: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-
-}
 
 header {
     text-align: left;
@@ -386,7 +385,7 @@ header .intro-text .intro-heading {
         font-family: 'Damion', cursive;
         font-size: 60px;
         font-style: italic;
-        line-height: 40px;
+        line-height: 60px;
     }
 
     header .intro-text .intro-heading {
