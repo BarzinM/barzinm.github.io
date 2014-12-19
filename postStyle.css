@@ -2601,7 +2601,13 @@ body {
   color: #d0d0d0;
   background-color: #272822;
  border-radius: 5px;
+
 }
+
+.highlight span{
+   font-family:monospace,courier;
+}
+
 .highlight pre {
   position: relative;
   margin: 0;
@@ -2847,6 +2853,7 @@ body {
     border: 1px solid black;
     border-collapse: collapse;
     margin-bottom: 1em;
+
 }
 .postcontent th,.postcontent td {
     padding: 15px;
