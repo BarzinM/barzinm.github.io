@@ -1,0 +1,367 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Imageprocessing</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Portfolio of Barzin Moridian. Areas of interest: Robotics, Mechatronics, Controls, Machine Learning, and Image processing.">
+    <link rel="canonical" href="http://barzinm.com/2014/05/03/ImageProcessing/">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+<body id="page-top" class="index">
+
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="http://barzinm.com/../../../../postStyle.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="http://barzinm.com/css/font-awesome/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" style="max-width:900px;margin:auto;background-color:#272822;">
+<div class="postnav">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-shrink" style="position:inherit">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="http://barzinm.com#page-top" ng-hide="">Barzin M</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="http://barzinm.com">Home</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="http://barzinm.com#posts">Posts</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="http://barzinm.com#portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="http://barzinm.com#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!-- Header --> 
+</div>
+<div class="postcontent">
+<p>http://www.pelagodesign.com/blog/2009/07/21/how-to-make-ubuntu-linux-run-faster-on-a-laptop/
+http://ubuntuforums.org/showthread.php?t=1062261
+http://askubuntu.com/questions/196603/how-to-remove-the-graphical-user-interface</p>
+
+<h1 id="linear-regression-method-for-machine-learning">Linear Regression Method for Machine learning</h1>
+
+<p>[TOC]</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Linear regression method is used to predict a value based on the information from a data set. In this method a relationship between a dependent variable and one or more explanatory variables is derived. The explanatory variables are called features. Value of features in study can be independent from each other or be a combination of other features. For example, for predicting the power load on a power plant the following features can be considered:</p>
+
+<ul>
+  <li>Constant value of $X_0=1$</li>
+  <li>Time of the day</li>
+  <li>Time of the year</li>
+  <li>Town population</li>
+  <li>e<sup>age of power infrastructure</sup></li>
+  <li>Number of houses</li>
+  <li>$\frac{Town Population}{Number Of Houses}$</li>
+  <li>…</li>
+</ul>
+
+<h3 id="hypothesis">Hypothesis</h3>
+<p>Hypothesis is a function that uses some values ($X_0, X_1, X_2, X_3, …$) to output a value $y$ as a prediction.
+Each feature $ X $ is multiplied to a parameter $\theta$ to construct a hypothesis. The hypothesis (e.g. power load prediction) has the following linear form:
+<script type="math/tex">h_\theta (x) = \theta^T X</script>
+Using optimization methods the best $\theta$ values are calculated in a way that generate minimum errors from training set.
+Two main methods of calculating parameters $\theta$ are:</p>
+
+<h3 id="gradient-descent">Gradient descent</h3>
+
+<p>In gradient descent method, a cost function is computed that is equal to the average of differences (error) square between predicted values by hypothesis and actual values in the training set. 
+<script type="math/tex">J(\theta)=\frac{1}{2m}\sum_{i=1}^{m} (h_\theta(x^{(i)})-y^{(i)})^2</script>
+<code>Matlab
+J = transpose(X * theta - y) * (X * theta - y) / 2 / m;	% Cost function calculation
+</code>
+In which $J$ is the cost value, $y$ is vector of  dependent values from the training set, and $m$ is number of training samples.
+The gradient of this cost function shows the best direction for minimizing relative to each parameter.
+<script type="math/tex">\theta_j := \theta_j-\frac{\alpha}{m}\sum_{i=1}^{m} (h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}</script> 
+<code>matlab
+sum = transpose(X) * ( X * theta - y);	% Should be the same size of theta
+theta = theta - sum * alpha / m;	% Updated theta values
+</code>
+In which $\alpha$ is the learning rate set by the user.
+This method requires feature normalization to reduce the number of iterations needed. This is done by subtracting the mean value of each feature group in the training set and dividing by their respective standard deviation.
+<code>matlab
+mu = mean(X);	% Average value
+sigma = std(X);	% Standard deviation
+X_norm = (X - mu) ./ sigma;	% Normalized values
+</code></p>
+
+<h3 id="normal-equations">Normal equations</h3>
+
+<p>This method gives the exact solution in a single calculation for optimized parameters $\theta$ and does not need any feature scaling (normalization). The downside of using this method is that in case of adding a training set to the existing one or even adding one more training data requires doing all the calculations from the beginning which can be process demanding.
+Normal equation can be calculated as follow:
+<script type="math/tex">\theta=(X^T X)^{-1} X^T y</script>
+<code>matlab
+theta = (transpose(X) * X) \ (transpose(X) * y); % Optimal theta values
+</code></p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>In this section, the linear regression method is applied to a data set with 47 training samples each with 2 features.</p>
+
+<h3 id="code">Code</h3>
+
+<p>```matlab
+clear ; close all; clc</p>
+
+<p>fprintf(‘Loading data …\n’);</p>
+
+<p>%% Load Data
+data = load(‘training_set.txt’);
+X = data(:, 1:2);
+y = data(:, 3);
+m = length(y);</p>
+
+<p>% Print out some data points
+fprintf(‘First 10 examples from the dataset: \n’);
+fprintf(‘ x = [%.0f %.0f], y = %.0f \n’, [X(1:10,:) y(1:10,:)]’);</p>
+
+<p>% Scale features and normalization
+fprintf(‘Normalizing Features …\n’);</p>
+
+<p>[X mu sigma] = featureNormalize(X);</p>
+
+<p>% Add intercept term to X
+X = [ones(m, 1) X];</p>
+
+<p>fprintf(‘Running gradient descent …\n’);</p>
+
+<p>% Choose some alpha value
+alpha = 0.01;
+num_iters = 400;</p>
+
+<p>% Init Theta and Run Gradient Descent 
+theta = zeros(3, 1);
+[theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters);
+% Plot the convergence graph
+figure;
+plot(1:numel(J_history), J_history, ‘-b’, ‘LineWidth’, 2);
+xlabel(‘Number of iterations’);
+ylabel(‘Cost J’);</p>
+
+<p>% Display gradient descent’s result
+fprintf(‘Theta computed from gradient descent: \n’);
+fprintf(‘ %f \n’, theta);
+fprintf(‘\n’);</p>
+
+<p>mu = [0 mu];
+sigma = [1 sigma];
+x_sample = ([1 1650 3] - mu) ./ sigma;</p>
+
+<p>y = x_sample * theta; % You should change this</p>
+
+<p>fprintf([‘Predicted y (using gradient descent):\n $%f\n’], y);</p>
+
+<p>fprintf(‘Solving with normal equations…\n’);</p>
+
+<p>data = csvread(‘ex1data2.txt’);
+X = data(:, 1:2);
+y = data(:, 3);
+m = length(y);</p>
+
+<p>% Add intercept term to X
+X = [ones(m, 1) X];</p>
+
+<p>% Calculate the parameters from the normal equation
+theta = normalEqn(X, y);</p>
+
+<p>% Display normal equation’s result
+fprintf(‘Theta computed from the normal equations: \n’);
+fprintf(‘ %f \n’, theta);
+fprintf(‘\n’);</p>
+
+<p>x_sample = [1 1650 3];
+y = x_sample * theta; </p>
+
+<p>fprintf([‘Predicted y (using normal equations):\n $%f\n’], y);
+<code>
+---------------------
+</code>matlab
+function [X_norm, mu, sigma] = featureNormalize(X)
+%FEATURENORMALIZE Normalizes the features in X 
+%   FEATURENORMALIZE(X) returns a normalized version of X where
+%   the mean value of each feature is 0 and the standard deviation
+%   is 1. This is often a good preprocessing step to do when
+%   working with learning algorithms.</p>
+
+<p>X_norm = X;
+mu = zeros(1, size(X, 2));
+sigma = zeros(1, size(X, 2));     </p>
+
+<p>mu = mean(X);
+sigma = std(X);
+X_norm = (X - mu) ./ sigma;</p>
+
+<p>end
+<code>
+---------------
+</code>matlab
+function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)
+%GRADIENTDESCENTMULTI Performs gradient descent to learn theta
+%   theta = GRADIENTDESCENTMULTI(x, y, theta, alpha, num_iters) updates theta by
+%   taking num_iters gradient steps with learning rate alpha</p>
+
+<p>% Initialize values
+m = length(y); % number of training examples
+J_history = zeros(num_iters, 1);</p>
+
+<p>for iter = 1:num_iters</p>
+
+<pre><code>% Save the cost J in every iteration    
+J_history(iter) = computeCostMulti(X, y, theta);
+</code></pre>
+
+<p>end</p>
+
+<p>end</p>
+
+<h2 id="section">```</h2>
+<p>```matlab
+function J = computeCostMulti(X, y, theta)
+%COMPUTECOSTMULTI Compute cost for linear regression with multiple variables
+%   J = COMPUTECOSTMULTI(X, y, theta) computes the cost of using theta as the
+%   parameter for linear regression to fit the data points in X and y</p>
+
+<p>m = length(y); % number of training examples</p>
+
+<p>J = transpose(X * theta - y) * (X * theta - y) / 2 / m;</p>
+
+<p>end</p>
+
+<h2 id="section-1">```</h2>
+<p>```matlab
+function [theta] = normalEqn(X, y)
+%NORMALEQN Computes the closed-form solution to linear regression 
+%   NORMALEQN(X,y) computes the closed-form solution to linear 
+%   regression using the normal equations.</p>
+
+<p>theta = (transpose(X) * X) \ (transpose(X) * y);</p>
+
+<p>end</p>
+
+<p>```
+<strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong>_
+### Training set</p>
+
+<p>Visualization of data:
+<img src="https://dl.dropboxusercontent.com/u/9059775/blog/Machine_Learning/Linear_regression_data.jpg" alt="Data Visualization" /></p>
+
+<p>Few numerical samples of data:
+ x = [2104 3], y = 399900 
+ x = [1600 3], y = 329900 
+ x = [2400 3], y = 369000 
+ x = [1416 2], y = 232000 
+ x = [3000 4], y = 539900 
+ x = [1985 4], y = 299900 
+ x = [1534 3], y = 314900 
+ x = [1427 3], y = 198999 
+ x = [1380 3], y = 212000 
+ x = [1494 3], y = 242500 </p>
+
+<h3 id="results">Results</h3>
+
+<p>Decreasing the cost function via gradient descent can be seen in the figure below:</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/9059775/blog/Machine_Learning/LinearRegressionCost.jpg" alt="Cost function" /></p>
+
+<p>And the final results are:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right"> </th>
+      <th>Gradient descent</th>
+      <th>Normal equation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">$\theta_1$</td>
+      <td>334302.063993</td>
+      <td>89597.909543</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">$\theta_2$</td>
+      <td>100087.116006</td>
+      <td>139.210674</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">$\theta_3$</td>
+      <td>3673.548451</td>
+      <td>-8738.019112</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Prediccted $y$ for $x = [1650, 3]$</td>
+      <td>289314.620338</td>
+      <td>293081.464335</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>DO NOT FORGET</strong> that for calculating $y$ using gradient descent method, $x=[1650, 3]$ should go through the same normalization process as rest of the data. This is the main reason for the big difference between $\theta$ values in two methods.</p>
+        
+</div>
+  <footer>
+        <div >
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Barzin M 2014</span>
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
