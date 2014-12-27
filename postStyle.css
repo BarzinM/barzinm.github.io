@@ -2825,9 +2825,10 @@ body {
 	color:#000;
 }
 .postcontent p{
+    font-size:18px;
 	color:#000;
 }
-.postcontent ul a{
+.postcontent a{
 	color:#36c7fe;
 }
 .postcontent img{
