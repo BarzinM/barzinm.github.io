@@ -1102,6 +1102,7 @@ section.success {
 
 .post-list .entry-date{
     font-size:.9rem;
+    line-height: unset;
     margin-bottom: 0px;
     text-transform: uppercase;
     display:inline;
