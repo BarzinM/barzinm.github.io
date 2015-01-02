@@ -1102,7 +1102,7 @@ section.success {
 
 .post-list .entry-date{
     font-size:.9rem;
-    line-height: 1.8;
+    line-height: unset;
     margin-bottom: 0px;
     text-transform: uppercase;
     display:inline;
@@ -2621,7 +2621,7 @@ body {
   padding-right: 24px;
   color: #8f908a;
 }
-.highlight .hll {
+.highlight {
   background-color: #49483e;
 }
 .highlight .c {
@@ -2825,9 +2825,10 @@ body {
 	color:#000;
 }
 .postcontent p{
+    font-size:18px;
 	color:#000;
 }
-.postcontent ul a{
+.postcontent a{
 	color:#36c7fe;
 }
 .postcontent img{
