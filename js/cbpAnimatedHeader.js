@@ -13,7 +13,7 @@ var cbpAnimatedHeader = (function() {
 	var docElem = document.documentElement,
 		header = document.querySelector( '.navbar-fixed-top' ),
 		didScroll = false,
-		changeHeaderOn = $("#Interests").position().top-80;
+		changeHeaderOn = $("#Interests").position().top-100;// can have -80
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
@@ -27,12 +27,12 @@ var cbpAnimatedHeader = (function() {
 	function scrollPage() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
-			classie.add( header, 'navbar-shrink' );
 			$(".navbar-brand.page-scroll").show(true);
+			classie.add( header, 'navbar-shrink' );
 		}
 		else {
-			classie.remove( header, 'navbar-shrink' );
 			$(".navbar-brand.page-scroll").hide(true);
+			classie.remove( header, 'navbar-shrink' );
 		}
 		didScroll = false;
 	}
