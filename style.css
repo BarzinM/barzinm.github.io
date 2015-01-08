@@ -23,11 +23,7 @@ body {
     text-align: justify;
 }
 .text-primary {
-    color: # {
-        {
-            site.color.primary
-        }
-    }
+    color: # 36c7fe
     ;
 }
 p {
@@ -38,19 +34,11 @@ a, a:hover, a:active, a.active {
     outline: 0;
 }
 a {
-    color: # {
-        {
-            site.color.primary
-        }
-    }
+    color: # 36c7fe
     ;
 }
 a:hover, a:active, a.active {
-    color: # {
-        {
-            site.color.secondary
-        }
-    }
+    color: # 36c7fe
     ;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -75,57 +63,33 @@ h4 {
     background-color: #222;
 }
 .btn-primary {
-    border-color: # {
-        {
-            site.color.primary
-        }
-    }
+    border-color: # 36c7fe
     ;
     text-transform: uppercase;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #fff;
-    background-color: # {
-        {
-            site.color.primary
-        }
-    }
+    background-color: # 36c7fe
     ;
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
-    border-color: # {
-        {
-            site.color.primary
-        }
-    }
+    border-color: # 36c7fe
     ;
     color: #fff;
-    background-color: # {
-        {
-            site.color.secondary
-        }
-    }
+    background-color: # 36c7fe
     ;
 }
 .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
     background-image: none;
 }
 .btn-primary .badge {
-    color: # {
-        {
-            site.color.primary
-        }
-    }
+    color: # 36c7fe
     ;
     background-color: #fff;
 }
 .btn-xl {
     padding: 20px 40px;
-    border-color: # {
-        {
-            site.color.primary
-        }
-    }
+    border-color: # 36c7fe
     ;
     border-radius: 5px;
     text-transform: uppercase;
@@ -133,37 +97,21 @@ h4 {
     font-size: 1.5em;
     font-weight: 700;
     color: #fff;
-    background-color: # {
-        {
-            site.color.primary
-        }
-    }
+    background-color: # 36c7fe
     ;
 }
 .btn-xl:hover, .btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl {
-    border-color: # {
-        {
-            site.color.primary
-        }
-    }
+    border-color: # 36c7fe
     ;
     color: #fff;
-    background-color: # {
-        {
-            site.color.secondary
-        }
-    }
+    background-color: # 36c7fe
     ;
 }
 .btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl {
     background-image: none;
 }
 .btn-xl .badge {
-    color: # {
-        {
-            site.color.primary
-        }
-    }
+    color: # 36c7fe
     ;
     background-color: #fff;
 }
@@ -176,48 +124,28 @@ h4 {
 }
 .navbar-default-posts .navbar-brand, .navbar-default .navbar-brand {
     font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
-    color: # {
-        {
-            site.color.primary
-        }
-    }
+    color: # 36c7fe
     ;
     font-size: 1.5em;
 }
 .navbar-default-posts .navbar-brand:hover, .navbar-default-posts .navbar-brand:focus, .navbar-default-posts .navbar-brand:active, .navbar-default-posts .navbar-brand.active, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:active, .navbar-default .navbar-brand.active {
-    color: # {
-        {
-            site.color.secondary
-        }
-    }
+    color: # 36c7fe
     ;
 }
 .navbar-default .navbar-collapse, .navbar-default-posts .navbar-collapse {
     border-color: rgba(255, 255, 255, .02);
 }
 .navbar-default .navbar-toggle, .navbar-default-posts .navbar-toggle {
-    border-color: # {
-        {
-            site.color.primary
-        }
-    }
+    border-color: # 36c7fe
     ;
-    background-color: # {
-        {
-            site.color.primary
-        }
-    }
+    background-color: # 36c7fe
     ;
 }
 .navbar-default .navbar-toggle .icon-bar, .navbar-defalut-posts .navbar-toggle .icon-bar {
     background-color: #fff;
 }
 .navbar-default-posts .navbar-toggle:hover, .navbar-default-posts .navbar-toggle:focus, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: # {
-        {
-            site.color.primary
-        }
-    }
+    background-color: # 36c7fe
     ;
 }
 .navbar-default .nav li a, .navbar-default-posts .nav li a {
@@ -229,30 +157,18 @@ h4 {
 }
 .navbar-default .nav li a:hover, .navbar-default .nav li a:focus, .navbar-default-posts .nav li a:hover, .navbar-default-posts .nav li a:focus {
     outline: 0;
-    color: # {
-        {
-            site.color.primary
-        }
-    }
+    color: # 36c7fe
     ;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default-posts .navbar-nav>.active>a {
     border-radius: 0;
     color: #fff;
-    background-color: # {
-        {
-            site.color.primary
-        }
-    }
+    background-color: # 36c7fe
     ;
 }
 .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .navbar-default-posts .navbar-nav>.active>a:hover, .navbar-default-posts .navbar-nav>.active>a:focus {
     color: #fff;
-    background-color: # {
-        {
-            site.color.secondary
-        }
-    }
+    background-color: # 36c7fe
     ;
 }
 #Interests {
@@ -394,11 +310,7 @@ ul.social-buttons li a {
     vertical-align: middle;
 }
 ul.social-buttons li a:hover, ul.social-buttons li a:active {
-    background-color: # {
-        {
-            site.color.primary
-        }
-    }
+    background-color: # 36c7fe
     ;
 }
 .btn:active, .btn.active {
@@ -406,20 +318,12 @@ ul.social-buttons li a:hover, ul.social-buttons li a:active {
 }
 ::-moz-selection {
     text-shadow: none;
-    background: # {
-        {
-            site.color.primary
-        }
-    }
+    background: # 36c7fe
     ;
 }
 ::selection {
     text-shadow: none;
-    background: # {
-        {
-            site.color.primary
-        }
-    }
+    background: # 36c7fe
     ;
 }
 img::selection {
@@ -429,20 +333,12 @@ img::-moz-selection {
     background: 0 0;
 }
 body {
-    webkit-tap-highlight-color: # {
-        {
-            site.color.primary
-        }
-    }
+    webkit-tap-highlight-color: # 36c7fe
     ;
 }
 section.success {
     color: #fff;
-    background: # {
-        {
-            site.color.primary
-        }
-    }
+    background: # 36c7fe
     ;
     text-align:justify;
 }
@@ -533,7 +429,7 @@ section.success {
 .grid figure {
     border-style: solid;
     border-width: 10px;
-    margin: 5px;
+    margin: 10px;
     border-radius: 20px;
     -webkit-transition: 0.2s;
     transition: 0.2s;
