@@ -1,0 +1,7 @@
+---
+layout: post
+date:   2014-02-03 23:26:12
+photo: artv.png
+caption_header: autonomous ground vehicles
+caption: Design, modification, and manufacturing of mechanical and electrical components for lab-sized and world-sized autonomous ground vehicle platforms.
+---

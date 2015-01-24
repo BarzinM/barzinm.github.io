@@ -1,0 +1,76 @@
+{% include css/bootstrap.min.css %}
+{% include css/agency.css %}
+{% include css/print.css %}
+{% include css/syntax.css %}
+
+
+.postnav{
+	color:#000;
+	background-color: #fff;
+}
+
+.postnav .container{
+	width:100%;
+}
+
+.postnav .navbar{
+		border-radius: 0px;
+		background-color:#272822;
+}
+
+.postcontent{
+	margin-top:-20px;
+	padding:20px;
+	background-color:#fff;
+	border-radius: 5px;
+	color:#000;
+}
+.postcontent p{
+    text-align:justify;
+    font-size:1.2em;
+	color:#000;
+}
+.postcontent a{
+	text-decoration:none;
+	color:#{{site.color.primary}};
+}
+.postcontent img{
+	width:auto;
+	max-width:100%;
+	margin:auto;
+}
+
+.postcontent h1{
+	font-size:3em;
+}
+
+.postcontent h3{
+	font-size:1.5em;
+}
+
+.postcontent table{
+	margin:auto;
+	border-radius: 5px;
+}
+
+.postcontent table,.postcontent th,.postcontent td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+
+}
+.postcontent th,.postcontent td {
+    padding: 15px;
+}
+
+.postcontent table tr:nth-child(even) {
+    background-color: #eee;
+}
+.postcontent table tr:nth-child(odd) {
+   background-color:#fff;
+}
+.postcontent table th	{
+    background-color: black;
+    color: white;
+}
+
