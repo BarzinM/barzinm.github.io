@@ -21,7 +21,7 @@ Linear regression method is used to predict a value based on the information fro
 + Town population
 + e<sup>age of power infrastructure</sup>
 + Number of houses
-+ $$ \frac{Town Population}{Number Of Houses} $$
++ \$$ \frac{Town\: Population}{Number\: Of\: Houses} $$
 + ...
 
 ### Hypothesis

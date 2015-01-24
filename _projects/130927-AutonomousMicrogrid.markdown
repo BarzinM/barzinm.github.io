@@ -13,9 +13,10 @@ caption: Establishing microgrids using ground robots in unknown environments wit
 
 ## Introduction
 
-In recent years power systems are leaning more towards using decentralized models. In traditional centralized power systems, a failure in system results in loosing electrical energy completely. Critical systems use backup systems such as generators for staying powered on but these backup systems are temporary. In decentralized models, there are many power sources connected to each other, storage systems, and power loads. This model increases the flexibility and robustness of the grid. The same model can be used in smaller size (i.e. microgrid) which uses connection between different power nodes to establish a reliable power system. These type of microgrids can be exceptionally useful when electrical power is needed in an area with limited access to main grid such as electrical energy needed for emergency response after occurrence of a disaster. In such incident, communication towers, temporary medical units, and many more establishments require power.
+In recent years power systems are leaning more towards using decentralized models. In traditional centralized power systems, a failure in system results in loosing electrical energy completely. Critical systems use backup systems such as generators for staying powered on but these backup systems are temporary. In decentralized models, there are many power sources connected to each other, storage systems, and power loads. This model increases the flexibility and robustness of the grid. The same model can be used in smaller size (i.e. microgrid) which uses connection between different power nodes to establish a reliable power system. These type of microgrids can be exceptionally useful when electrical power is needed in an area with limited access to main grid such as electrical energy needed for emergency response after occurrence of a disaster. In such incident, communication towers, temporal medical units, and many more establishments require power.
 
-![]()
+{: style="text-align:center"}
+![Power Line Destructed ](http://lh4.ggpht.com/-T5cR1KxRkno/UCaauBpFRfI/AAAAAAAAINU/5XuNZQ4dYWE/image_thumb%25255B8%25255D.png?imgmax=800)
 
 ## Navigation Components
 
@@ -23,7 +24,7 @@ In recent years power systems are leaning more towards using decentralized model
 
 In this project multiple autonomous ground vehicles were programmed to connect multiple power nodes (e.g. source, load, and storage) to each other and establish a microgrid. The vehicles were equipped with range sensors to perform path planning in unknown environments without colliding with any of the obstacles or each other. 
 
-![]()
+![]({{site.baseurl}}/img/post_images/IR_data.png)
 
 ### Path Tracking
 
@@ -45,11 +46,13 @@ A power module called PEBB (power electric building block) is developed by a col
 
 Below are two demos recorded from in lab experiments:
 
-![]()
+{:style="text-align:center"}
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/k0tLXF5Rl6M/0.jpg)](http://www.youtube.com/watch?v=k0tLXF5Rl6M)
 
-![]()
+{:style="text-align:center"}
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/vEzUub5z3Fc/0.jpg)](http://www.youtube.com/watch?v=vEzUub5z3Fc)
 
 The articles resulted from this project can be accessed from the following:
 
-+ [ Autonomous Power Distribution System ]()
++ [ Autonomous Power Distribution System ](http://www.ifac-papersonline.net/Detailed/65205.html)
 + [ Multiagent Power Establishment ]()
