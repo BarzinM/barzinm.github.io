@@ -36,7 +36,7 @@
 }
 .postcontent img{
 	width:auto;
-	max-width:100%;
+	max-width:75%;
 	margin:auto;
 }
 
@@ -74,3 +74,6 @@
     color: white;
 }
 
+.postcontent .post_fig{
+	text-align:center;
+}
