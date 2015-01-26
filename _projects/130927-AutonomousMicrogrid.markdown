@@ -4,6 +4,7 @@ date:   2014-02-03 23:26:12
 photo: powerbot.png
 caption_header: Autonomous Microgrids Establishment
 caption: Establishing microgrids using ground robots in unknown environments without human intervention.
+comments: true
 ---
 
 # Establishing microgrids using autonomous ground vehicles

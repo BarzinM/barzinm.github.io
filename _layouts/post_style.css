@@ -77,3 +77,20 @@
 .postcontent .post_fig{
 	text-align:center;
 }
+
+.share-page {
+    text-align: center;
+    color: #FFF;
+    margin:20px;
+    padding: 8px 15px;
+}
+.share-page a {
+	font-weight: 700;
+	margin-left: 10px;
+}
+
+#disqus_thread{
+	border:solid 5px #FFF;
+	border-radius:5px;
+	padding:20px;
+}
