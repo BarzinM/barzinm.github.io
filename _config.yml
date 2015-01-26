@@ -1,7 +1,7 @@
 baseurl: http://barzinm.com
 destination: /home/naslab/BRZN/BarzinM.github.io/_site
 # Site settings
-title: Barzin Moridian - Mechatronics Engineer
+title: Barzin M
 description: "Portfolio of Barzin Moridian. Areas of interest: Robotics, Mechatronics, Controls, Machine Learning, and Image processing."
 collections:
   projects:
