@@ -15,7 +15,7 @@
                     <li><a rel="author" href="https://plus.google.com/+BarzinM" title="Google+ Profile"><i class="fa fa-google-plus"></i></a>
                     </li>
                     {% for network in site.social %}
-                    <li><a href="{{ network.url }}" title="{{network.title}}"><i class="fa fa-{{ network.fa-title }}"></i></a>
+                    <li><a rel="me" href="{{ network.url }}" title="{{network.title}}"><i class="fa fa-{{ network.fa-title }}"></i></a>
                     </li>
                     {% endfor %}
                 </ul>
