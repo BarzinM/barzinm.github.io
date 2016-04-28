@@ -9,9 +9,35 @@ body {
     overflow-x: hidden;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.date{
+    font-size: 1.2em;
+}
+.location{
+    color: #000;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+.description{
+    color: #000;
+}
+
+.description p{
+    text-align: justify;
+}
+.project{
+    padding-left: 1em;
+    border-left: solid #000;
+}
+.project p{
+    color: #000;
+}
+.link{
+    color: #36c7fe;
+}
 .text-muted {
     color: #777;
 }
+/* to be removed:*/
 .col-md-6 .text-muted {
     text-align: justify;
 }
@@ -25,12 +51,16 @@ p {
 a, a:hover, a:active, a.active {
     outline: 0;
 }
-a {
-    color: #{{site.color.primary}};
+.project img{
+    max-width: 100%;
 }
-a:hover, a:active, a.active {
+/*a {
+    color: #{{site.color.primary}};
+}*/
+/*a:hover, a:active, a.active {
     color: #{{site.color.secondary}};
 }
+*/
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -185,7 +215,7 @@ section h3.section-subheading {
     font-weight: 400;
 }
 .service-heading {
-    margin: 15px 0;
+    margin: 0px 0;
     text-transform: none;
 }
 #portfolio * {
