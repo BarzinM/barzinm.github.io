@@ -35,7 +35,7 @@ address:
 # Build settings
 permalink: pretty
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 future: true
 paginate: 5
 
