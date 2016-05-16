@@ -38,14 +38,14 @@ permalink: pretty
 markdown: kramdown
 highlighter: rouge # pygments
 future: true
-paginate: 5
+# paginate: 5
 
 kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 2..6
-  use_coderay: true
+  enable_coderay: true
 
   coderay:
     coderay_line_numbers: table
