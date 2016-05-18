@@ -1,50 +1,36 @@
-<nav class="">
-    <div class="container">
-        <div class="">
-            <button type="button" class="" data-toggle="" data-target="">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="" href="#page-top">{{site.title}}</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <!-- <li class="hidden"> -->
-                <li class="">
-                    <a href="#page-top"></a>
+<div class="topbar">
+            <ul>
+                <li>
+                    <a href="{{site.url}}">Home</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#Interests">Interests</a>
+                    <a href="#experience">Experience</a>
+                </li>
+                {% comment %}
+                <li>
+                    <a href="#posts">Posts</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#posts">Posts</a>
+                    <a href="#portfolio">Portfolio</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    <a href="#about">Bio</a>
+                </li>
+                {% endcomment %}
+                <li>
+                    <a href="{{site.url}}/cv.pdf">CV</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#about">Bio</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
-        </div>
-    </div>
-</nav>
+</div>
 <header>
-    <div class="something" style="background-image:url({{ "/img/header-bg.png" | prepend:site.baseurl }});background-attachment: scroll;overflow: hidden;background-color: #000;background-position: center;top: 0;left: 0;right: 0;bottom: 0;">
-    <div class="container">
-        <div class="intro-text">
+        <div class="intro-text" style="display:table;margin:0 auto">
         <div class="intro-heading">Barzin M</div>
-            <div class="intro-lead-in">Projects & Posts<br>UNDER CONSTRUCTION</div>
+            <div class="intro-lead-in">Projects & Posts</div>
             <div style="text-align:center">
-            <a href="#Interests" class="page-scroll btn btn-xl">Tell Me More</a>
             </div>
         </div>
-    </div>
-    </div>
 </header>
 

@@ -1,45 +1,197 @@
 <!-- Experience Section -->
 <section id="experience">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="section-heading">EXPERIENCE
+        <a rel="me" href="{{ site.url }}/cv.pdf" title="PDF Curriculum Vitae"><i class="fa fa-file-pdf-o"></i></a></h2>
+        <h3 class="section-subheading text-muted">Here are some of the roles that I've played in my professional career.</h3>
+      </div>
+    </div>
+    <div class="row">
+      <!-- ////////////Start of experience///////////// -->
+      <div class="col-xs-12">
+        <h4 class="col-md-3 date">
+          Jan 2015 until today
+        </h4>
+        <div class="col-md-9 experience">
+          <h4 class="service-heading">Robotics Research Engineer &amp Lab Manager</h4>
+          <div class="location">@Nonlinear and Autonomous Systems Laboratory (<a href="http://me.sites.mtu.edu/mahmoudian/">NasLab</a>)
+          </div>
+          <div class="description">
+            <p>One of the exciting parts of my profession is to work with mechatronics systems. This can extend from machining support structures, design and manufacturing of moving mechanisms to developing drivers for sensors, programming controllers, micro-controllers, and FPGAs.</p>
+          </div>
+          <div class="project">
+            <h5>Path planning algorithm development</h5>
+            <p>In this project I made a navigation module that uses the readings from a Lidar sensor to perform path planning. The navigation module evaluates the environment to see if there are any Lidar reading indicating that an obstacle is on the way if the robot directly move towards the destination which will result in collision. If there isn't any obstacle then perfect. But if there is any, then some algorithms are called to decide on the best temporary destination (I call it subgoal here) to go to before moving towards the ultimate destination. The algorithms run in real-time meaning that a different subgoal might get chosen before the robot reaches the first subgoal. The algorithm might even choose to move to a different subgoal after it has reached the first one and before moving towards the ultimate destination, and so on. The module does not consider the robot to be a dimensionless point which results in higher level of reliability for robots of different sizes.</p>
+            <div class="row">
+              <div class="col-sm-6">
+                <a href="{{site.url}}/img/indoor.png"><img src="{{site.url}}/img/indoor.png"></a><p class="text-muted">Simulating the path planning algorithm in a concave, corridor-like type of environment.</p>
+              </div>
+              <div class="col-sm-6">
+                <a href="{{site.url}}/img/outdoor.png"><img src="{{site.url}}/img/outdoor.png"></a><p class="text-muted">Simulating the algorithm in an environment similar to outdoors.</p>
+              </div>
+              <div class="col-sm-6">
+{% comment %}
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nGpb8FjvCTw" frameborder="0" allowfullscreen></iframe><p class="text-muted">Testing the algorithm on robots.</p>
+{% endcomment %}
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <h5>Autonomous Mobile Microgrid</h5>
+            <p>The objective of this project was to make a group of autonomous mobile robots to move to a desired area, setup all the electrical nodes (generators, renewable energy sources, converters, batteries, etc.) that was carried by robots or the ones that are available in the area. The system would make electrical connection between them and make an electrical network to provide energy to the power loads in the area without human intervention. This network doesn't need to be connected to the main power grid and can operate independently. In summary the system was designed to establish a microgrid in a remote area autonomously. For this project we had to design electrical connections to make it easy for the robots to establish electrical connections without the need for complex mechanisms, algorithms, or human operators. We then implemented all the tools on multiple robots and made a system that makes sure that all the robots can collaborate together to accomplish the mission while each robot is performing a separate task.</p>
+            <div class="row">
+              <!-- IMAGE SAMPLE -->
+              <div class="col-sm-6">
+                <a href="{{site.url}}/img/schematic_for_three2.jpg"><img src="{{site.url}}/img/schematic_for_three2.jpg"></a>
+                <p class="text-muted"></p>
+              </div>
+              <div class="col-sm-6">
+                <a href="{{site.url}}/img/MobileMicrogrid.png"><img src="{{site.url}}/img/MobileMicrogrid.png"></a>
+                <p class="text-muted"></p>
+              </div>
+              <!-- END OF IMAGE SAMPLE -->
+              <!-- VIDEO SAMPLE -->
+              <div class="col-sm-6">
+{% comment %}
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7fPMHeMCfXE" frameborder="0" allowfullscreen></iframe>
+                <p class="text-muted"></p>
+{% endcomment %}
+              </div>
+              <!-- END OF VIDEO SAMPLE -->
+            </div>
+          </div>
+          <div class="project">
+            <h5>Automated Planning of Persistent Missions</h5>
+            <p>In many robotic missions, specially the ones that involve hard to reach environments such as underwater, energy is a great concern. For example, even the high-end autonomous underwater vehicles (AUV) can only operate for few hours. The operation limitation applies to many types of robots in general. The robots need to refuel or charge batteries which is a time and money consuming operation and also requires human intervention. To improve mission persistence for robots, the amount of time that they can operate independently should increase. The proposed system can drastically improve the operation time, make persistent mission for many types of robots possible, and open the door for robots that can operate and re-energize themselves completely independently. Given a map of the mission area, a developed planning software generates the optimal paths for working robots and service robots and also the optimal location for stationary charger. A mission performed in this manner has much better energy efficiency and makes it possible to perform robotic missions for very long periods of time. The hardware implementation of the project is in development.</p>
+          </div>
+        </div>
+      </div>
+      <!-- ////////////End of experience///////////// -->
+      <!-- ////////////Start of experience///////////// -->
+      <div class="col-xs-12">
+        <h4 class="col-md-3 date">
+          Fall 2012 - End of 2014
+        </h4>
+        <div class="col-md-9 experience">
+          <h4 class="service-heading">Robotics Graduate Researcher &amp Team Lead of Autonomous Ground Vehicles group</h4>
+          <div class="location">@Nonlinear and Autonomous Systems Laboratory (<a href="http://me.sites.mtu.edu/mahmoudian/">NasLab</a>)
+          </div>
+          <div class="description">
+            <p>I worked here while I was getting my M.Sc. in Mechanical Engineering. My education was focusing on dynamic systems and control of them and working here helped me see the advantages of focusing on programming to make more reliable control systems.</p>
+          </div>
+          <div class="project">
+            <h5>Autonomous Mobile Microgrid Proof of Concept</h5>
+            <p>This project was the start of autonomous mobile microgrid project that I did later on. In this one we were still figuring out how we can use robots for energy solutions. We were experimenting with different ideas and components. Finally, we made a system comprised of two small National Instruments robots that made a small electric network without human intervention.</p>
+            <div class="row">
+              <div class="col-sm-6">
+{% comment %}
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/k0tLXF5Rl6M?list=PLkMYgm8PFAwYqB8ZoOA1JWI159sfrDKTG" frameborder="0" allowfullscreen></iframe>
+                <p class="text-muted"></p>
+              </div>
+              <div class="col-sm-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vEzUub5z3Fc?list=PLkMYgm8PFAwYqB8ZoOA1JWI159sfrDKTG" frameborder="0" allowfullscreen></iframe>
+                <p class="text-muted"></p>
+{% endcomment %}
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <h5>Navigation for Small Ground Robots</h5>
+            <p>The problem was to develop a set of algorithms that can use a single infrared (IR) sensor to understand their environment and navigate while avoiding obstacles. We used Dani robots from National Instruments and the algorithms were developed in LabView.</p>
+            <div class="row">
+              <div class="col-sm-6">
+                <a href="{{site.url}}/img/DaNI.png"><img src="{{site.url}}/img/DaNI.png"></a>
+                <p class="text-muted">The robots that I programmed to do power network establishment.</p>
+              </div>
+              <div class="col-sm-6">
+                <a href="{{site.url}}/img/IR_data.png"><img src="{{site.url}}/img/IR_data.png"></a>
+                <p class="text-muted">Readings from IR sensor installed on a servo was used for path planning.</p>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <h5>Automated Planning of Persistent Missions</h5>
+            <p> descritption of the project</p>
+          </div>
+        </div>
+      </div>
+      <!-- ////////////End of experience///////////// -->
+      <!-- ////////////Start of experience///////////// -->
+      <div class="col-xs-12">
+        <h4 class="col-md-3 date">
+          Fall 2012 - Summer 2013
+        </h4>
+        <div class="col-md-9 experience">
+          <h4 class="service-heading">Controls Gradute Researcher</h4>
+          <div class="location">@Energy Mechatronics Lab (<a href="LINK">LINK</a>)
+          </div>
+          <div class="description">
+            <p>DESCRIPTION</p>
+          </div>
+          <div class="project">
+            <h5>PROJECT TITLE</h5>
+            <p>PROJECT DESCRIPTION</p>
+            <div class="row">
+              <!-- IMAGE SAMPLE -->
+              <div class="col-sm-6">
+{% comment %}
+                <a href="IMAGE LINK"><img src="IMAGE LINK"></a>
+                <p class="text-muted">IMAGE DESCRIPTION</p>
+              </div>
+              <!-- END OF IMAGE SAMPLE -->
+              <!-- VIDEO SAMPLE -->
+              <div class="col-sm-6">
+                <iframe width="560" height="315" src="YOUTUBE LINK" frameborder="0" allowfullscreen></iframe><p class="text-muted">VIDEO DESCRIPTION</p>
+{% endcomment %}
+              </div>
+              <!-- END OF VIDEO SAMPLE -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ////////////End of experience///////////// -->
+    </div>
+  </div>
+</section>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="section-heading">Experience</h2>
-                <h3 class="section-subheading text-muted">What have I been up to</h3>
+
+
+
+
+{% comment %}
+      <!-- ////////////Start of experience///////////// -->
+      <div class="col-xs-12">
+        <h4 class="col-md-3 date">
+          TIME
+        </h4>
+        <div class="col-md-9 experience">
+          <h4 class="service-heading">TITLE</h4>
+          <div class="location">@WHERE (<a href="LINK">LINK</a>)
+          </div>
+          <div class="description">
+            <p>DESCRIPTION</p>
+          </div>
+          <div class="project">
+            <h5>PROJECT TITLE</h5>
+            <p>PROJECT DESCRIPTION</p>
+            <div class="row">
+              <!-- IMAGE SAMPLE -->
+              <div class="col-sm-6">
+                <a href="IMAGE LINK"><img src="IMAGE LINK"></a>
+                <p class="text-muted">DESCRIPTION</p>
+              </div>
+              <!-- END OF IMAGE SAMPLE -->
+              <!-- VIDEO SAMPLE -->
+              <div class="col-sm-6">
+                <iframe width="560" height="315" src="YOUTUBE LINK" frameborder="0" allowfullscreen></iframe>
+                <p class="text-muted">DESCRIPTION</p>
+              </div>
+              <!-- END OF VIDEO SAMPLE -->
             </div>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-md-3 date">
-                Jan 2015 until today
-            </div>
-            <div class="col-md-9" style="min-height:350px">
-                <h4 class="service-heading">Research Engineer and Lab Manager</h4>
-                <div class="location">@Nonlinear and Autonomous Systems Laboratory (<a href="http://me.sites.mtu.edu/mahmoudian/">NasLab</a>)
-                </div>
-                    <div class="description">
-                        <p>One of the exciting parts of my profession is to work with mechatronics systems. This can extend from machining support structures, design and manufacturing of moving mechanisms to developing drivers for sensors, programming controllers, micro-controllers, and FPGAs.</p>
-                    </div>
-                    <div class="project">
-                        <h5>Path planning algorithm development</h5>
-                        <p> descritption of the project</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="http://me.sites.mtu.edu/mahmoudian/wp-content/uploads/sites/9/2013/06/smaller1-1024x682.jpg">
-                            </div>
-                            <div class="col-md-6">
-                                <img src="http://me.sites.mtu.edu/mahmoudian/wp-content/uploads/sites/9/2013/06/smaller1-1024x682.jpg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <h5>Autonomous Mobile Microgrid</h5>
-                        <p> descritption of the project</p>
-                    </div>
-                    <div class="project">
-                        <h5>Automated Planning of Persistent Missions</h5>
-                        <p> descritption of the project</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+      <!-- ////////////End of experience///////////// -->
+{% endcomment %}
