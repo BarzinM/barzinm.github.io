@@ -1,5 +1,5 @@
-baseurl: '.' #http://barzinm.com
-url: '.' #http://barzinm.com
+baseurl: http://barzinm.com
+url: http://barzinm.com
 destination: /home/barzinm/Pets/barzinm.github.io/_site
 # Site settings
 title: Barzin's Personal Page
