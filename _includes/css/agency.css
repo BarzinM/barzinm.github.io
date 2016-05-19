@@ -43,11 +43,12 @@ body {
 .date{
     font-size: 1.2em;
 }
-.expereince{
-
+.experience{
+    margin-bottom:3em;
 }
 p{
     text-align:justify;
+    margin-bottom:1em;
 }
 .location{
     color: #000;
@@ -58,36 +59,32 @@ p{
     color: #000;
 }
 .project{
-    padding-left: 1em;
-    margin-left:1em;
-    border-left: solid #000;
+    padding-left: 0em;
+    margin-left:2em;
+    margin-bottom:-1px;
+    border-style:solid;
+    border-width: 1px 0;
 }
 .link{
     color: #{{site.color.primary}};
 }
 .text-muted {
     color: #777;
+    font-size:.8em;
     line-height: 1em;
-    margin:0 1em 0 1em;
 }
-.col-xs-12{
-    margin-top:3em;
+.project img{
+    width: 100%;
+}
+.project iframe{
+    max-width: 100%;    
 }
 /* to be removed:*/
-.col-md-6 .text-muted {
-    text-align: justify;
-}
 .text-primary {
     color: #{{site.color.primary}};
 }
 a, a:hover, a:active, a.active {
     outline: 0;
-}
-.project img{
-    max-width: 100%;
-}
-.project iframe{
-    max-width: 100%;    
 }
 /*a {
     color: #{{site.color.primary}};
