@@ -1,5 +1,3 @@
-{% comment %}
 {% include css/bootstrap.min.css %}
-{% endcomment %}
 {% include css/agency.css %}
 {% include css/print.css %}
