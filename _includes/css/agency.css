@@ -3,41 +3,104 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
+.topbar{
+    overflow: hidden;
+    background-color: #222;
+}
+.topbar ul{
+    margin:0;
+    float:right;
+}
+.topbar li{
+    display:inline;
+    float:left;
+}
+.topbar li a{
+    padding:1em;
+    display:block;
+    color:white;
+    text-decoration: none;
+}
+.topbar li a:hover{
+    background-color: #000;
+    color:#{{site.color.primary}};
+}
+.my-fa-linkedin:before {
+  content: "\f0e1";
+} 
+.my-fa-youtube:before {
+  content: "\f167";
+}
+.my-fa-github:before {
+  content: "\f09b";
+}
 body {
     font-size: 15px;
     overflow-x: hidden;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+}
+.date{
+    font-size: 1.2em;
+}
+.experience{
+    margin-bottom:3em;
+}
+p{
+    text-align:justify;
+    margin-bottom:1em;
+}
+.location{
+    color: #000;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+.description{
+    color: #000;
+}
+.project{
+    padding-left: 0em;
+    margin-left:2em;
+    margin-bottom:-1px;
+    border-style:solid;
+    border-width: 1px 0;
+}
+.link{
+    color: #{{site.color.primary}};
 }
 .text-muted {
     color: #777;
+    font-size:.8em;
+    line-height: 1em;
 }
-.col-md-6 .text-muted {
-    text-align: justify;
+.project img{
+    width: 100%;
 }
+.project iframe{
+    max-width: 100%;    
+}
+/* to be removed:*/
 .text-primary {
     color: #{{site.color.primary}};
-}
-p {
-    font-size: 1em;
-    line-height: 1.75;
 }
 a, a:hover, a:active, a.active {
     outline: 0;
 }
-a {
+/*a {
     color: #{{site.color.primary}};
+}*/
+/*a:hover, a:active, a.active {
 }
-a:hover, a:active, a.active {
-    color: #{{site.color.secondary}};
-}
+*/
 h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
+    padding-bottom:5px;
+    color: #{{site.color.secondary}};
 }
 h4 {
     font-size: 1.4em;
+    margin-top:0;
 }
 .img-centered {
     margin: 0 auto;
@@ -95,6 +158,7 @@ h4 {
     color: #{{site.color.primary}};
     background-color: #fff;
 }
+
 .navbar-default {
     border-color: transparent;
     background-color: #222;
@@ -150,22 +214,23 @@ h4 {
 }
 header {
     text-align: left;
-    color: #000;
+    padding: 100px 0 100px 0;
+    background-color: #{{site.color.secondary}};
 }
 header .intro-text {
+    color:#FFF;
     padding-top: 100px;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding-bottom: 50px;
 }
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: 'Damion', cursive;
-    font-size: 3em;
+    font-size: 2em;
     font-style: italic;
 }
 header .intro-text .intro-heading {
     margin-bottom: 25px;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 4em;
+    font-size: 5em;
     font-weight: 700;
     line-height: 50px;
 }
@@ -174,19 +239,12 @@ section {
     padding: 75px 0;
 }
 section h2.section-heading {
-    margin-top: 0;
-    margin-bottom: 15px;
     font-size: 3em;
 }
 section h3.section-subheading {
-    margin-bottom: 75px;
     text-transform: none;
     font-size: 1.3em;
     font-weight: 400;
-}
-.service-heading {
-    margin: 15px 0;
-    text-transform: none;
 }
 #portfolio * {
     z-index: 2;
@@ -300,9 +358,6 @@ img::selection {
 }
 img::-moz-selection {
     background: 0 0;
-}
-body {
-    webkit-tap-highlight-color: #{{site.color.primary}};
 }
 section.success {
     color: #fff;
@@ -429,6 +484,9 @@ section.success {
     .grid li {
         width: 33.3%;
     }
+    .experience{
+        margin-left:15px;
+    }
 }
 @media screen and (max-width: 35em) {
     .grid li {
@@ -479,29 +537,5 @@ section.success {
     }
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
-    }
-    header .something {
-        height: 600px;
-    }
-    header .intro-text {
-        padding-top: 150px;
-        padding-bottom: 200px;
-    }
-    header .intro-text .intro-lead-in {
-        margin-bottom: 25px;
-        margin-left: 300px;
-        font-family: 'Damion', cursive;
-        font-size: 4em;
-        font-style: italic;
-        line-height: 60px;
-    }
-    header .intro-text .intro-heading {
-        margin-left: 100px;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 6em;
-        font-weight: 700;
-        line-height: 75px;
     }
 }

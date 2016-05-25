@@ -1,7 +1,6 @@
 {% include css/bootstrap.min.css %}
 {% include css/agency.css %}
 {% include css/print.css %}
-{% include css/syntax.css %}
 
 
 .postnav{

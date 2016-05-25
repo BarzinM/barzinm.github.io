@@ -1,16 +1,17 @@
 baseurl: http://barzinm.com
-destination: /home/naslab/BRZN/BarzinM.github.io/_site
+url: http://barzinm.com
+destination: /home/barzinm/Pets/barzinm.github.io/_site
 # Site settings
-title: Barzin M
+title: Barzin's Personal Page
 description: "Portfolio of Barzin Moridian. Areas of interest: Robotics, Mechatronics, Controls, Machine Learning, and Image processing."
-collections:
-  projects:
-    output: true
+# collections:
+#   projects:
+#     output: true
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
   primary: 36c7fe #fed136
-  secondary: 36c7fe #fec503
+  secondary: 025ea2 #36c7fe #fec503
   secondary-dark: 000
 
 
@@ -18,7 +19,7 @@ color:
 social:
   - title: View LinkedIn Profile
     fa-title: linkedin
-    url: https://www.linkedin.com/in/barzinmoridain/
+    url: https://www.linkedin.com/in/barzinmoridian
   - title: View GitHub Profile
     fa-title: github
     url: https://github.com/BarzinM
@@ -32,24 +33,65 @@ address:
   - line: 1400 Townsend Dr.,
   - line: Houghton, MI 49931
 
-# Build settings
-permalink: pretty
-markdown: kramdown
-highlighter: pygments
-future: true
-paginate: 5
+# Where things are
+# source:       .
+# destination:  ./_site
+plugins_dir:  ./_plugins
+layouts_dir:  ./_layouts
+data_dir:     ./_data
+includes_dir: ./_includes
+collections:  null
+
+# Handling Reading
+safe:         false
+include:      [".htaccess"]
+exclude:      []
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false
+
+# Plugins
+whitelist: []
+gems:      []
+
+# Conversion
+markdown:    kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Serving
+detach:  false
+port:    4000
+host:    127.0.0.1
+baseurl: "" # does not include hostname
+
+# Outputting
+permalink:     date
+paginate_path: /page:num
+timezone:      null
+
+quiet:    false
+defaults: []
+
+# Markdown Processors
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
 
 kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 2..6
-  use_coderay: true
-
-  coderay:
-    coderay_line_numbers: table
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false

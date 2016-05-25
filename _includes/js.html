@@ -1,7 +1,8 @@
- <!-- jQuery Version 1.11.0 -->
+ {% comment %}
  <script src="{{ "/js/jquery-1.11.0.js" | prepend: site.baseurl }}"></script>
  <!-- Bootstrap Core JavaScript -->
  <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+ <!-- jQuery Version 1.11.0 -->
  <!-- Plugin JavaScript -->
  <script src="{{ "/js/jquery.easing.min.js" | prepend: site.baseurl }}"></script>
  <script src="{{ "/js/classie.js" | prepend: site.baseurl }}"></script>
@@ -9,13 +10,4 @@
  <!-- Contact Form JavaScript -->
  <script src="{{ "/js/jqBootstrapValidation.js" | prepend: site.baseurl }}"></script>
  <!-- Custom Theme JavaScript -->
- <script src="{{ "/js/agency.js" | prepend: site.baseurl }}"></script>
- <script language="JavaScript">
-    var addr="barzin"+".m";
-    addr+="@"+"gm"+"ail"+".com";
-    $(".mailAddressAddedWithJava").parent().mouseover(function(){
-        $(".mailAddressAddedWithJava").attr("href","mailto:"+addr);
-    }).mouseleave(function(){
-        $(".mailAddressAddedWithJava").attr("href","mailto:meisam.razmara@gmail.com");
-    });
-</script>
+{% endcomment %}

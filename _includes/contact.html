@@ -3,21 +3,18 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">CONTACT ME</h2>
+                <h2 class="section-heading">Get Connected</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
+            <p class="text-center" style="color:#{{site.color.secondary}}">Email: <a href="mailto:Barzin.m[a-t]gmail[d-o-t]com">Barzin.m [a-t] gmail [d-o-t] com</a></p>
                 <ul class="list-inline social-buttons">
-                    <script language="JavaScript">
-                    document.write("<li><a title=\"Send Email\" class=\"&#109;&#097;&#105;&#108;&#065;&#100;&#100;&#114;&#101;&#115;&#115;&#065;&#100;&#100;&#101;&#100;&#087;&#105;&#116;&#104;&#074;&#097;&#118;&#097;\" href='" + "mail" + "to:meisam.razmara@gmail.com'>" + "<i class= \"fa fa-envelope-o\"></i>" + "</a></li>");
-                    </script>
-                    <li><a rel="publisher" href="https://plus.google.com/+BarzinM" title="Google+ Profile"><i class="fa fa-google-plus"></i></a>
-                    </li>
                     {% for network in site.social %}
-                    <li><a rel="me" href="{{ network.url }}" title="{{network.title}}"><i class="fa fa-{{ network.fa-title }}"></i></a>
+                    <li><a rel="me" href="{{ network.url }}" title="{{network.title}}"><i class="fa my-fa-{{ network.fa-title }}"></i></a>
                     </li>
                     {% endfor %}
+                    <li><a rel="me" href="https://scholar.google.com/citations?user=Yutc0tkAAAAJ&hl=en" title="Google Scholar"><i class="ai ai-google-scholar"></i></a></li>
                 </ul>
             </div>
         </div>
