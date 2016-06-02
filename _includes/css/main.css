@@ -11,7 +11,12 @@
 }
 .topbar ul{
     margin:0;
+}
+.topbar .float-right{
     float:right;
+}
+.topbar .float-left{
+    float:left;
 }
 .topbar li{
     display:inline;
