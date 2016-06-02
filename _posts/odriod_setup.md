@@ -6,6 +6,7 @@ caption_header: Odriod Setup and Configuration what is this?
 ---
 
 
+
 # **Ubuntu Server** and **ROS** installation on **ODROID-XU4**
 
 ## My Setup
@@ -70,7 +71,7 @@ I have an Odroid XU4[^xu4] on which I want to have Ubuntu Server and ROS.
 
 1. Eject the SD card and put it in the Odroid and power it up.
 
-1. The user name and password for the image are respectively `root` and `odroid`. If everything is OK then you should be able to ssh into it with
+1. When you first install the mentioned Ubuntu image, the user name and password for the image are respectively `root` and `odroid`. If everything is OK then you should be able to ssh into it with
     
     ```bash
     $ ssh 192.168.0.30 -l root # Use the IP assigned to the board
@@ -80,7 +81,48 @@ I have an Odroid XU4[^xu4] on which I want to have Ubuntu Server and ROS.
 
 ## Some Ubuntu Customizations
 
+### Update the OS
+
+If you are connected to the Internet then do the following in the terminal of the board. If you are not connected to the Internet but want to be then go to the [next section](#connect-to-internet-via-host-computer). You need to be superuser for these commands. One option is to run them with `sudo` at the beginning of each line.
+
+```bash
+$ apt-get update
+$ apt-get upgrade
+$ apt-get dist-upgrade
+$ apt-get autoclean
+$ apt-get autoremove
+```
+
 ### Connect to Internet via Host Computer
+
+1. Type the following in terminal of the host computer from which you plan to share the Internet. You probably need superuser privileges to do so:
+
+    ```bash
+    $ iptables --table nat --append POSTROUTING --out-interface wlan2 -j MASQUERADE # change wlan2 to the network interface connected to internet
+    $ iptables --append FORWARD --in-interface eth0 -j ACCEPT # change eth0 to the network interface connected to the board
+    $ echo 1 > /proc/sys/net/ipv4/ip_forward
+    ```
+
+2. Type the following in the terminal of the board. You can `ssh` into it to do so. Again, you need to run the commands below as superuser:
+
+    ```bash
+    $ route add default gw 192.168.0.1 # change 192.168.0.1 to whatever IP address the host computer has
+    $ echo "nameserver 8.8.8.8" >> /etc/resolv.conf # 8.8.8.8 is Google's public DNS so, don't change it unless you know what you are doing
+    ```
+
+3. Test everything by typing the following in the terminal of the board:
+
+    ```bash
+    $ ping google.com
+    ```
+
+    * If you don't know what to get out of the `ping` output, well, you should. In the meanwhile, you can try the following command instead.
+
+
+    ```bash
+    $ ping -c 1 google.com > /dev/null 2>&1; if [ $? -eq 0 ]; then echo "YOU ARE CONNECTE!"; else echo "YOU ARE NOT CONNECTED"; fi
+    ```
+    
 
 ### Eliminating I2C Warnings During Boot
 http://odroid.com/dokuwiki/doku.php?id=en:xu4_tips
@@ -88,10 +130,24 @@ http://odroid.com/dokuwiki/doku.php?id=en:xu4_tips
 
 ## ROS Installation
 
+1. Perform the followings in the terminal of your board to install ROS[^ros].
+
+    ```bash
+    $ sudo update-locale LANG=C LANGUAGE=C LC_ALL=C LC_MESSAGES=POSIX # setting system locale
+    $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list' # adding ROS source to source lists
+    $ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116 # using a pretty good privacy [^pgp]
+    $ sudo apt-get update
+    $ sudo apt-get install ros-jade-ros-base # installs ROS Jade
+    $ sudo apt-get install python-rosdep
+    $ sudo rosdep init
+    $ rosdep update
+    $ echo "source /opt/ros/jade/setup.bash" >> ~/.bashrc
+    $ source ~/.bashrc
+    ```
 
 ## Notes
 
-* You need to use `sync` when you call `dd`. This makes sure the buffer is writen to the device.
+* You need to use `sync` when you call `dd`. This makes sure the buffer is written to the device.
 
 * Don't just unplug the power when you want to turn it off. Use:
     
@@ -114,6 +170,23 @@ http://odroid.com/dokuwiki/doku.php?id=en:xu4_tips
     ```
 
 * Odroid also provides *Lubuntu* which I tried and chose not to use.
+* If you get the following error when doing `sudo update-locale LANG=C LANGUAGE=C LC_ALL=C LC_MESSAGES=POSIX`:
+    
+    ```bash
+    perl: warning: Setting locale failed.
+    perl: warning: Please check that your locale settings:
+    LANGUAGE = (unset),
+    LC_ALL = (unset),
+    LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+    perl: warning: Falling back to the standard locale ("C").
+    ```
+    
+    Fix it by running the following:
+
+    ```bash
+    $ locale-gen en_US en_US.UTF-8 hu_HU hu_HU.UTF-8
+    ```
 
 ## TODO
 
@@ -123,3 +196,6 @@ http://odroid.com/dokuwiki/doku.php?id=en:xu4_tips
 
 [^xu4]: [Odroid-XU4 wiki](http://odroid.com/dokuwiki/doku.php?id=en:odroid-xu4)
 
+[^pgp]: [Introduction to Apt Authentication](https://help.ubuntu.com/community/SecureApt)
+
+[^ros]: [ROS Ubuntu Arm](http://wiki.ros.org/jade/Installation/UbuntuARM)
