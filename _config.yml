@@ -99,11 +99,11 @@ kramdown:
   enable_coderay: false
   syntax_highlighter_opts:
     css_class: 'highlight'
-    scope: '.highlight'
+    # scope: '.highlight'
     span:
       line_numbers: false
     block:
-      line_numbers: true
+      line_numbers: false
       start_line: 1
 
   # coderay:
