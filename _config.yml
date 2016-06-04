@@ -1,5 +1,5 @@
 baseurl: http://barzinm.com
-url: http://barzinm.com
+url: /home/barzinm/Pets/barzinm.github.io/_site/
 destination: /home/barzinm/Pets/barzinm.github.io/_site
 # Site settings
 title: Barzin's Personal Page
@@ -89,9 +89,27 @@ redcarpet:
   extensions: []
 
 kramdown:
+  input: GFM
+  syntax_highlighter: rouge
   auto_ids:       true
   footnote_nr:    1
   entity_output:  as_char
   toc_levels:     1..6
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    # scope: '.highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
+  # coderay:
+  #   coderay_wrap:              div
+  #   coderay_line_numbers:      inline
+  #   coderay_line_number_start: 15
+  #   coderay_tab_width:         4
+  #   coderay_bold_every:        10
+  #   coderay_css:               style
