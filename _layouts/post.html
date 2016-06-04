@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
-
 {% include post_head.html %}
+{% include post_header.html %} 
+
 
 
 <body>
-{% include post_header.html %} 
 <div class="container">
 <section>
 {{content}}        
 </section>
-</div>
 {% include share_page.html %}
-{%include post_footer.html %}
+</div>
 </body>
+
+
+{% include footer.html %}
 </html>
 {% include js.html %}

@@ -5,37 +5,10 @@ title: Hello World!
 caption_header: Hello World!
 ---
 
-# Hello World!
+# First Post!
 
-## First post
+Hello, so, here is my first post. I plan to publish posts on different topics that are intersting to me. I might write posts on different topics, like technology, business, or even cooking. Hopefully, keeping it as informal as possible. I'm going to think of each post as something that I want the 'future me' to have access to and hope others find them usefull too.
 
-The purpose of this site is to introduce projects that I've worked on during my professional career. Also I'm using this space to post interesting stuff that I come across, mainly in the field of technology.
-
-```python
-import pika
-
-
-class MessageQueueService(object):
-
-    def log(self, message, queue, host, direction=MessageQueueLog.RECEIVED):
-        message_log = MessageQueueLog.objects.create(
-                queue=queue,
-                host=host,
-                message=message,
-                direction=direction
-            )
-        return message_log	pass
-```
-
-```c++
-#include <iostream>
-
-using namespace std;
-
-int main(int argc, char *argv[])
-{
-cout << "Hello World !!!" << endl;
-return 0;
-}
-
+```bash
+echo `echo SGVsbG8gV29ybGQhCg== | base64 -d` # bash
 ```
