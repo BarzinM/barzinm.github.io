@@ -81,7 +81,7 @@ I have an Odroid XU4[^xu4] on which I want to have Ubuntu Server and ROS.
     $ ssh 192.168.0.30 -l root # Use the IP assigned to the board
     ```
 
-    * If there is something wrong then connect a monitor and keyboard. See what errors you get. If known try `ifconfig` and examine the `eth0`. These might give enough leads for troubleshooting.
+    * If there is something wrong then connect a monitor and keyboard. See what errors you get during boot. If you know what IP it's suppose to have try `ifconfig` and confirm the `eth0` network interface. These might give enough leads for troubleshooting.
 
 ## Some Ubuntu Customizations
 

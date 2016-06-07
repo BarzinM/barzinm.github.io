@@ -15,12 +15,6 @@ I have an Odroid XU4[^xu4] on which I want to have Ubuntu Server and ROS.
 
 ## Ubuntu Installation
 
-### Hacky Way
-
-1. First we get the `arm-eabi-x.y.tar.gz` toolchain this is used for building native apps. Eabi is embedded ABI[^abi] which means that it is designed for bare metal. Then you need to find an *Ubuntu* source to build it with this.
-
-### Easy and Fast Way
-
 1. On the host computer, download the Ubuntu server image file from [this link](http://odroid.in/ubuntu_14.04lts/ubuntu-14.04lts-server-odroid-xu3-20150725.img.xz) or you can take a look at [here](http://odroid.in/ubuntu_14.04lts/) to see if any newer version is available.
 
 1. Connect a SD card to the host. you need find out which device it is in your `/dev/` tree. You can do so by `sudo fdisk -l`. The other way is to type the following before and after you insert the card `ls /dev/sd*`. See which the new item in that list. Using `fdisk` or `df -h` make sure that the size of the device is as expected (e.g. you shouldn't see 256GB for a 16GB card).
@@ -83,7 +77,8 @@ I have an Odroid XU4[^xu4] on which I want to have Ubuntu Server and ROS.
 
 ### Update the OS
 
-If you are connected to the Internet then do the following in the terminal of the board. If you are not connected to the Internet but want to be then go to the [next section](#connect-to-internet-via-host-computer). You need to be superuser for these commands. One option is to run them with `sudo` at the beginning of each line.
+If you are connected to the Internet then do the following in the terminal of the board. If you are not connected to the Internet, but want to get Internet access through host computer, then go to the [next section](#connect-to-internet-via-host-computer).
+You need to be superuser for these commands. One option is to run them with `sudo` at the beginning of each line.
 
 ```bash
 $ apt-get update
@@ -98,7 +93,7 @@ $ apt-get autoremove
 1. Type the following in terminal of the host computer from which you plan to share the Internet. You probably need superuser privileges to do so:
 
     ```bash
-    $ iptables --table nat --append POSTROUTING --out-interface wlan2 -j MASQUERADE # change wlan2 to the network interface connected to internet
+    $ iptables --table nat --append POSTROUTING --out-interface wlan2 -j MASQUERADE # change wlan2 to the network interface connected to Internet
     $ iptables --append FORWARD --in-interface eth0 -j ACCEPT # change eth0 to the network interface connected to the board
     $ echo 1 > /proc/sys/net/ipv4/ip_forward
     ```
@@ -125,15 +120,46 @@ $ apt-get autoremove
     
 
 ### Eliminating I2C Warnings During Boot
-http://odroid.com/dokuwiki/doku.php?id=en:xu4_tips
+To fix the boot errors similar to:
+
+    [   11.229087] [c4] INA231 2-0040: I2C write error: (-6) reg: 0x0
+    [   11.233666] [c4] INA231 2-0040: ============= Probe INA231 Fail! : sensor_arm (0xFFFFFFFA) =============
+
+Make a `/etc/modprobe.d/blacklist-odroid.conf ` file with the following content:
+
+    blacklist ina231_sensor 
 
 ### Setup Git
 
+Git is a powerful version control system and version control is a must for developers. It will also be helpful with downloading public repositories that you'll most probably come across many times.
+
+1. From a terminal install Git:
+
+    ```bash
+    $ sudo apt-get install git-all
+    ```
+
+2. And configure your name and email address:
+    
+    ```bash
+    $ git config --global user.name "YOUR NAME"
+    $ git config --global user.email "YOUR EMAIL ADDRESS"
+    ```
+
+3. [Optional] Configure your editor:
+
+    ```bash
+    $ git config --global core.editor vim
+    ```
+
 ### Fix Clock
 
-sudo ntpdate time.nist.gov
-dpkg-reconfigure tzdata
+Correct the datetime of the board using the commands below:
 
+```bash
+$ sudo ntpdate time.nist.gov
+$ sudo dpkg-reconfigure tzdata
+```
 
 ## ROS Installation
 
@@ -146,6 +172,17 @@ dpkg-reconfigure tzdata
     $ sudo apt-get update
     $ sudo apt-get install ros-jade-ros-base # installs ROS Jade
     $ sudo apt-get install python-rosdep
+    ```
+
+2. Now you can get most of ROS packages like this:
+
+    ```bash
+    $ sudo apt-get install ros-jade-<package-name>
+    ```
+
+3. To be able to use ROS, finally do the followings:
+
+    ```bash
     $ sudo rosdep init
     $ rosdep update
     $ echo "source /opt/ros/jade/setup.bash" >> ~/.bashrc
@@ -154,7 +191,12 @@ dpkg-reconfigure tzdata
 
 ## Notes
 
-* You need to use `sync` when you call `dd`. This makes sure the buffer is written to the device.
+* You need to use `sync` after you call `dd`. This makes sure the buffer is written to the device.
+
+* Pay attention to `bash` vs `sh`. If you want to switch from `sh` to `bash` run:
+    ```bash
+    $ /bin/bash
+    ```
 
 * Pay attention to `bash` vs `sh`. If you want to switch from `sh` to `bash` run:
 
@@ -180,7 +222,7 @@ dpkg-reconfigure tzdata
     $ sudo shutdown -r
     ```
 
-* Odroid also provides *Lubuntu* which I tried and chose not to use.
+* Hardkernel also provides *Lubuntu* which I tried and chose not to use.
 * If you get the following error when doing `sudo update-locale LANG=C LANGUAGE=C LC_ALL=C LC_MESSAGES=POSIX`:
     
     ```bash
@@ -196,10 +238,10 @@ dpkg-reconfigure tzdata
     Fix it by running the following:
 
     ```bash
-    $ locale-gen en_US en_US.UTF-8 hu_HU hu_HU.UTF-8
+    $ locale-gen en_US en_US.UTF-8
+    $ dpkg-reconfigure locales
     ```
 
-## TODO
 
 ## References
 [^abi]:[What is Application Binary Interface (ABI)?](http://stackoverflow.com/questions/2171177/what-is-application-binary-interface-abi?rq=1)
