@@ -127,10 +127,17 @@ $ apt-get autoremove
 ### Eliminating I2C Warnings During Boot
 http://odroid.com/dokuwiki/doku.php?id=en:xu4_tips
 
+### Setup Git
+
+### Fix Clock
+
+sudo ntpdate time.nist.gov
+dpkg-reconfigure tzdata
+
 
 ## ROS Installation
 
-1. Perform the followings in the terminal of your board to install ROS[^ros].
+1. From a **non-root** user perform the followings in the terminal of your board to install ROS[^ros].
 
     ```bash
     $ sudo update-locale LANG=C LANGUAGE=C LC_ALL=C LC_MESSAGES=POSIX # setting system locale
@@ -148,6 +155,10 @@ http://odroid.com/dokuwiki/doku.php?id=en:xu4_tips
 ## Notes
 
 * You need to use `sync` when you call `dd`. This makes sure the buffer is written to the device.
+
+* Pay attention to `bash` vs `sh`. If you want to switch from `sh` to `bash` run:
+
+    /bin/bash
 
 * Don't just unplug the power when you want to turn it off. Use:
     
