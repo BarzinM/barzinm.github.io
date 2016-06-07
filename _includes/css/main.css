@@ -9,9 +9,11 @@
     background-color: #222;
     padding:0 1em;
 }
-.topbar ul{
-    margin:0;
+.topbar .float-right{
     float:right;
+}
+.topbar .float-left{
+    float:left;
 }
 .topbar li{
     display:inline;
@@ -106,7 +108,6 @@ a, a:hover, a:active, a.active {
 }
 */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
     padding-bottom:5px;
     color: #{{site.color.secondary}};
 }
@@ -164,51 +165,34 @@ header .intro-text .intro-lead-in {
 }
 {% comment %}
 {% endcomment %}
-footer {
-    position: relative;
-    padding: 25px 0;
+
+div.footer {
     text-align: center;
+    background: #000;
+    color: #FFF;
 }
-footer span.copyright {
-    text-transform: uppercase;
-    text-transform: none;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 40px;
-}
-footer ul.quicklinks {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    text-transform: none;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 40px;
-}
-footer a {
+div.footer a, div.footer span {
     color: inherit;
+    padding: 1em;
+    display:block;
 }
 ul.social-buttons {
-    margin-bottom: 0;
     text-align: center;
 }
 ul.social-buttons li a {
     display: block;
     width: 1.5em;
-    height: 1.5em;
     border-radius: 100%;
     font-size: 3em;
     line-height: 1.5em;
-    outline: 0;
     color: #fff;
     background-color: #222;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    transition: all .3s;
-    vertical-align: middle;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
 }
 ul.social-buttons li a:hover, ul.social-buttons li a:active {
     background-color: #{{site.color.primary}};
-}
-.btn:active, .btn.active {
-    outline: 0;
 }
 ::-moz-selection {
     text-shadow: none;
@@ -259,72 +243,6 @@ section.success {
 .post-list .entry-date {
     text-align: right;
 }
-
-/* Example media queries (reduce number of columns and change slideshow layout) */
-{% comment %}
-@media screen and (max-width: 60em) {
-    /* responsive columns; see "Element sizing" on http://masonry.desandro.com/options.html */
-    
-    body {
-        font-size: 13px;
-    }
-    .grid li {
-        width: 33.3%;
-    }
-    .experience{
-        margin-left:15px;
-    }
-}
-@media screen and (max-width: 35em) {
-    .grid li {
-        width: 50%;
-    }
-}
-@media screen and (max-width: 24em) {
-    .grid li {
-        width: 100%;
-    }
-}
-@media(min-width:768px) {
-    body {
-        font-size: 15px;
-    }
-    
-    .navbar-default {
-        padding: 25px 0;
-        border: 0;
-        background-color: transparent;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
-    }
-    .navbar-default-posts {
-        padding: 5px 0;
-        border: 0;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
-    }
-    .navbar-default .navbar-brand, .navbar-default-posts .navbar-brand {
-        font-size: 2em;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
-    }
-    .navbar-default .navbar-nav>.active>a {
-        border-radius: 3px;
-    }
-    .navbar-default.navbar-shrink {
-        padding: 10px 0;
-        background-color: #222;
-        position: fixed;
-        z-index: 10;
-    }
-    .navbar-default.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
-    }
-}
-{% endcomment %}
 @media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ 
     html {
         font-size:13px;
