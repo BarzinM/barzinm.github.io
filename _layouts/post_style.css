@@ -1,6 +1,28 @@
 {% include css/main.css %}
 {% include css/print.css %}
 
+.topbar, .footer, .content {
+    display: table-row;
+}
+.topbar, .footer {
+    height:1px;
+}
+.content {
+    height:auto;
+}
+html {
+    height:100%;
+    width:100%;
+}
+body {
+    display:table;
+    height:100%;
+    width:100%;
+    margin:0;
+	overflow: hidden;
+}
+
+
 .title{
 	font-family:'Gloria Hallelujah', cursive;
 }
