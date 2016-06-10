@@ -24,6 +24,7 @@
     display:block;
     color:white;
     text-decoration: none;
+    height:100%;
 }
 .topbar li a:hover{
     background-color: #000;
@@ -112,6 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1{
     font-size:3rem;
+    font-family: 'Indie Flower';
 }
 h2 {
     font-size:1.8rem;
@@ -140,6 +142,7 @@ header .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
     font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Indie Flower';
 }
 header .intro-text .intro-heading {
     margin-bottom: 25px;
