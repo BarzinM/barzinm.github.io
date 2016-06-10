@@ -1,11 +1,10 @@
     <section id="posts">
         <div class="container">
-          <div class="row">
                     <h2 class="section-heading" style="color:white">LATEST POSTS</h2>
                     <p class="section-subheading text-muted" style="color:#AAA">Here is a list of topics that I've found interesting and looked more into!</p>
                 
-          </div>
         <div class="entry-content">
+          <div class="row">
             <ul class="post-list">
                 {% for post in site.posts limit:10 %}
                 <li><a href="{{ site.url }}{{ post.url }}"><div class="col-sm-9">{{ post.caption_header }}</div> <div class="col-sm-3 entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></div></a></li>
@@ -13,7 +12,7 @@
                 {% endfor %}
                 <li><a href="{{site.url}}/posts/index.html"><div style="text-align:center">See All Posts ...</div></a></li>
             </ul>
+          </div>
         </div><!-- /.entry-content -->
-        </br>
     </div>
 </section>
