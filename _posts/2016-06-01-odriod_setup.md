@@ -1,8 +1,7 @@
 ---
 layout: post
 date:   2016-5-26 23:26:12
-title: Odriod Setup and Configuration
-caption_header: Odriod Setup and Configuration what is this?
+title: Ubuntu Server and ROS installation on ODROID-XU4
 ---
 
 
@@ -31,6 +30,7 @@ I have an Odroid XU4[^xu4] on which I want to have Ubuntu Server and ROS.
  1. Let's assume the SD card is on `/dev/sd?`, so I do the followings on host computer:
 
     ```bash
+    # Terminal:
     $ unxz ubuntu-14.04lts-server-odroid-xu3-20150725.img.xz # or use tar
     $ sudo dd if=/dev/zero of=/dev/sd? bs=1M # change sd?
     $ sync

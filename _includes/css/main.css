@@ -72,9 +72,6 @@ p
 .project{
     padding-left: 0em;
     margin-left:2em;
-    margin-bottom:-1px;
-    border-style:solid;
-    border-width: 1px 0;
 }
 .link{
     color: #{{site.color.primary}};
@@ -101,19 +98,11 @@ p
 a, a:hover, a:active, a.active {
     outline: 0;
 }
-/*a {
-    color: #{{site.color.primary}};
-}*/
-/*a:hover, a:active, a.active {
-}
-*/
 h1, h2, h3, h4, h5, h6 {
-    padding-bottom:5px;
     color: #{{site.color.secondary}};
 }
 h1{
     font-size:3rem;
-    font-family: 'Indie Flower';
 }
 h2 {
     font-size:1.8rem;
@@ -123,36 +112,28 @@ h3{
 }
 h4 {
     font-size: 1.1rem;
-    margin-top:0;
 }
 .img-centered {
     margin: 0 auto;
 }
-#portfolio {
-    background-image: url(./img/background-stripes.png);
-    background-color: #cccccc;
-}
 header {
     text-align: left;
-    padding: 100px 0;
     background-color: #{{site.color.secondary}};
 }
 header .intro-text {
     color:#FFF;
-    padding-top: 100px;
-    padding-bottom: 50px;
-    font-family: 'Gloria Hallelujah', cursive;
     font-family: 'Indie Flower';
+    display:table;
+    margin:0 auto;
+    padding:3em 0;
 }
 header .intro-text .intro-heading {
-    margin-bottom: 25px;
-    font-size: 5em;
+    font-size: 5rem;
     font-weight: 700;
-    line-height: 50px;
 }
 header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
-    font-size: 2em;
+    margin-left:2em;
+    font-size: 2rem;
 }
 
 #contact {
@@ -228,16 +209,17 @@ section.success {
 }
 .entry-content {
     display: block;
-    margin-right: 0px;
+    margin-right: 0;
 }
 .entry-content ul {
     list-style-type: none;
+    padding:0 2em;
 }
 .entry-content .post-list li {
-    padding: 5px;
-    border-bottom: 3px solid black;
+    border-bottom: .2em solid black;
 }
 .post-list a {
+    padding-top: .5em;
     color: #FFF;
     text-decoration: none;
     display:inline-block;
@@ -245,6 +227,11 @@ section.success {
 }
 .post-list .entry-date {
     text-align: right;
+}
+hr{
+    border:.2em solid #ddd;
+    border-radius: 1em;
+    margin:1em 0;
 }
 @media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ 
     html {
