@@ -7,23 +7,25 @@ category: robotics
 
 # **Ubuntu Server** and **ROS** installation on **ODROID-XU4**
 
+I have an Odroid XU4[^xu4] which I want to use for some robotic projects. In this post I go through the process of setting up the board, installing Ubuntu Server and ROS. Also, I look into making some adjustments to the fresh Ubuntu.
+
 * TOC
 {:toc}
 
-## My Setup
-
-I have an Odroid XU4[^xu4] on which I want to have Ubuntu Server and ROS.
 
 ## Ubuntu Installation
 
  1. On the host computer, download the Ubuntu server image file from [this link](http://odroid.in/ubuntu_14.04lts/ubuntu-14.04lts-server-odroid-xu3-20150725.img.xz) or you can take a look at [here](http://odroid.in/ubuntu_14.04lts/) to see if any newer version is available.
+
+    ```bash
+    $ wget http://odroid.in/ubuntu_14.04lts/ubuntu-14.04lts-server-odroid-xu3-20150725.img.xz # or any other version that you choose
+    ```
 
  1. Connect a SD card to the host. you need find out which device it is in your `/dev/` tree. You can do so by `sudo fdisk -l`. The other way is to type the following before and after you insert the card `ls /dev/sd*`. See which the new item in that list. Using `fdisk` or `df -h` make sure that the size of the device is as expected (e.g. you shouldn't see 256GB for a 16GB card).
 
  1. Let's assume the SD card is on `/dev/sd?`, so I do the followings on host computer:
 
     ```bash
-    # Terminal:
     $ unxz ubuntu-14.04lts-server-odroid-xu3-20150725.img.xz # or use tar
     $ sudo dd if=/dev/zero of=/dev/sd? bs=1M # change sd?
     $ sync
@@ -71,12 +73,26 @@ I have an Odroid XU4[^xu4] on which I want to have Ubuntu Server and ROS.
  1. When you first install the mentioned Ubuntu image, the user name and password for the image are respectively `root` and `odroid`. If everything is OK then you should be able to ssh into it with
     
     ```bash
-    $ ssh 192.168.0.30 -l root # Use the IP assigned to the board
+    $ ssh 192.168.0.30 -l root # Use the board's IP address
     ```
 
     If there is something wrong then connect a monitor and keyboard. See what errors you get. If known try `ifconfig` and examine the `eth0`. These might give enough leads for troubleshooting.
 
 ## Some Ubuntu Customizations
+
+### Create a new account
+
+Make a non-root account like this:
+
+```bash
+$ adduser some_username # and answer the questions asked
+$ adduser some_username sudo # give sudo privileges
+$ whoami # [optional] see the currently being used username
+$ su - some_username # switch to some_username
+$ whoami # [optional] confirm that account has been switched
+```
+
+You can use this user to ssh into the board from now on.
 
 ### Update the OS
 
@@ -139,7 +155,7 @@ Git is a powerful version control system and version control is a must for devel
  1. From a terminal install Git:
 
     ```bash
-    $ sudo apt-get install git-all
+    $ sudo apt-get install git
     ```
 
  2. And configure your name and email address:
@@ -171,7 +187,7 @@ $ sudo dpkg-reconfigure tzdata
     ```bash
     $ sudo update-locale LANG=C LANGUAGE=C LC_ALL=C LC_MESSAGES=POSIX # setting system locale
     $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list' # adding ROS source to source lists
-    $ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116 # using a pretty good privacy [^pgp]
+    $ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116 # using a pretty good privacy[^pgp]
     $ sudo apt-get update
     $ sudo apt-get install ros-jade-ros-base # installs ROS Jade
     $ sudo apt-get install python-rosdep
@@ -198,7 +214,9 @@ $ sudo dpkg-reconfigure tzdata
 
  *  Pay attention to `bash` vs `sh`. If you want to switch from `sh` to `bash` run:
 
-    /bin/bash
+    ```bash
+    $ /bin/bash
+    ```
 
  *  Don't just unplug the power when you want to turn it off. Use:
     
@@ -241,13 +259,7 @@ $ sudo dpkg-reconfigure tzdata
     $ dpkg-reconfigure locales
     ```
 
-
-## References
-[^abi]:[What is Application Binary Interface (ABI)?](http://stackoverflow.com/questions/2171177/what-is-application-binary-interface-abi?rq=1)
-[Difference between API and ABI](http://stackoverflow.com/questions/3784389/difference-between-api-and-abi?rq=1)
-
+---------
 [^xu4]: [Odroid-XU4 wiki](http://odroid.com/dokuwiki/doku.php?id=en:odroid-xu4)
-
-[^pgp]: [Introduction to Apt Authentication](https://help.ubuntu.com/community/SecureApt)
 
 [^ros]: [ROS Ubuntu Arm](http://wiki.ros.org/jade/Installation/UbuntuARM)
