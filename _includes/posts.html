@@ -5,10 +5,13 @@
         <div class="entry-content">
             <div class="row">
                 <ul class="post-list">
-                    {% for post in site.posts limit:10 %}
+                    {% for post in site.posts limit:site.first_page_post_count %}
                     <li><a href="{{ site.url }}{{ post.url }}"><div class="col-sm-9">{{ post.title }}</div> <div class="col-sm-3 entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></div><div class="clearfix"></div></a></li>
                     {% endfor %}
+                    {% assign number_of_posts =  site.posts | size  %}
+                    {% if number_of_posts > site.first_page_post_count %}
                     <li><a href="{{site.url}}/posts/index.html"><div class="col-sm-12" style="text-align:center">See All Posts ...</div></a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div><!-- /.entry-content -->

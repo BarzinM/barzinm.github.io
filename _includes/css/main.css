@@ -229,7 +229,7 @@ section.success {
     text-align: right;
 }
 hr{
-    border:.2em solid #ddd;
+    border:.1em solid #ddd;
     border-radius: 1em;
     margin:1em 0;
 }

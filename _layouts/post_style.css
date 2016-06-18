@@ -1,5 +1,7 @@
 {% include css/main.css %}
+{% comment %}
 {% include css/print.css %}
+{% endcomment %}
 
 .topbar, .footer, .content {
     display: table-row;

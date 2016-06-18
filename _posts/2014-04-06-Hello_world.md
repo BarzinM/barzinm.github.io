@@ -2,6 +2,7 @@
 layout: post
 date:   2016-06-12
 title: Hello World!
+category: general
 ---
 
 # First Post!

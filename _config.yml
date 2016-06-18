@@ -1,9 +1,16 @@
 baseurl: http://barzinm.com
 url: /home/barzinm/Pets/barzinm.github.io/_site
 destination: /home/barzinm/Pets/barzinm.github.io/_site
+
 # Site settings
 title: Barzin's Personal Page
 description: "Portfolio of Barzin Moridian. Areas of interest: Robotics, Mechatronics, Controls, Machine Learning, and Image processing."
+paginate: 10
+paginate_path: "/blog/page:num/"
+first_page_post_count: 5
+excerpt_separator: "\n\n"
+excerpt_separator: <!--more-->
+
 # collections:
 #   projects:
 #     output: true
@@ -58,13 +65,12 @@ unpublished: false
 
 # Plugins
 whitelist: []
-gems:      []
+gems:      [jekyll-paginate]
 
 # Conversion
 markdown:    kramdown
 highlighter: rouge
 lsi:         false
-excerpt_separator: "\n\n"
 incremental: false
 
 # Serving
@@ -74,8 +80,7 @@ host:    127.0.0.1
 baseurl: "" # does not include hostname
 
 # Outputting
-permalink:     date
-paginate_path: /page:num
+permalink:     /:categories/:year/:title.html
 timezone:      null
 
 quiet:    false

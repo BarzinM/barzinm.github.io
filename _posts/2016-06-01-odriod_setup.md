@@ -1,12 +1,12 @@
 ---
 layout: post
-date:   2016-5-26 23:26:12
+date:   2016-06-18
 title: Ubuntu Server and ROS installation on ODROID-XU4
+category: robotics
 ---
 
 
 # **Ubuntu Server** and **ROS** installation on **ODROID-XU4**
-{:.no_toc}
 
 * placeholder
 {:toc}
