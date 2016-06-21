@@ -80,7 +80,7 @@ I have an Odroid XU4[^xu4] which I want to use for some robotic projects. In thi
 
 ## Some Ubuntu Customizations
 
-### Create a new account
+### Create a New Account
 
 Make a non-root account like this:
 
@@ -112,8 +112,8 @@ $ apt-get autoremove
  1. Type the following in terminal of the host computer from which you plan to share the Internet. You probably need superuser privileges to do so:
 
     ```bash
-    $ iptables --table nat --append POSTROUTING --out-interface wlan2 -j MASQUERADE # change wlan2 to the network interface connected to Internet
-    $ iptables --append FORWARD --in-interface eth0 -j ACCEPT # change eth0 to the network interface connected to the board
+    $ iptables --table nat --append POSTROUTING --out-interface wlan2 -j MASQUERADE # change 'wlan2' to the network interface connected to Internet
+    $ iptables --append FORWARD --in-interface eth0 -j ACCEPT # change 'eth0' to the network interface connected to the board
     $ echo 1 > /proc/sys/net/ipv4/ip_forward
     ```
 
@@ -134,7 +134,7 @@ $ apt-get autoremove
 
 
     ```bash
-    $ ping -c 1 google.com > /dev/null 2>&1; if [ $? -eq 0 ]; then echo "YOU ARE CONNECTE!"; else echo "YOU ARE NOT CONNECTED"; fi
+    $ ping -c 1 google.com > /dev/null 2>&1; if [ $? -eq 0 ]; then echo "YOU ARE CONNECTED!"; else echo "YOU ARE NOT CONNECTED"; fi
     ```
     
 
