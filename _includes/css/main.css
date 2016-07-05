@@ -40,12 +40,11 @@
 }
 body {
     font-size: 1rem;
-    overflow-x: hidden;
     font-family: 'Open Sans',"Source Sans Pro", sans-serif;
     color: #000;
 }
 section{
-    padding:4em 0;
+    padding:4em 1em;
 }
 section-heading{
     font-size:3rem;
@@ -165,6 +164,7 @@ header .intro-text .intro-lead-in {
 }
 {% comment %}
 {% endcomment %}
+
 
 div.footer {
     text-align: center;
