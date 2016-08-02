@@ -103,8 +103,8 @@ You need to be superuser for these commands. One option is to run them with `sud
 $ apt-get update
 $ apt-get upgrade
 $ apt-get dist-upgrade
-$ apt-get autoclean
 $ apt-get autoremove
+$ apt-get autoclean
 ```
 
 ### Connect to Internet via Host Computer
@@ -130,7 +130,7 @@ $ apt-get autoremove
     $ ping google.com
     ```
 
-    If you don't know what to get out of the `ping` output, well, you should. In the meanwhile, you can try the following command instead.
+    Alternatively, you can try the following command instead.
 
 
     ```bash
