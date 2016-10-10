@@ -1,8 +1,35 @@
 {% include css/main.css %}
+{% comment %}
 {% include css/print.css %}
+{% endcomment %}
+
+.topbar, .footer, .content {
+    display: table-row;
+}
+.topbar, .footer {
+    height:1px;
+}
+.content {
+    height:auto;
+}
+html {
+    height:100%;
+}
+body {
+    display:table;
+    height:100%;
+    width:100%;
+}
+.post-list a {
+    color: #000;
+}
+.post-list a:hover{
+	color: #{{site.color.secondary}};
+}
 
 .title{
-	font-family:'Gloria Hallelujah', cursive;
+	font-family: 'Indie Flower';
+	font-size:1.2em;
 }
 .postcontent a{
 	text-decoration:none;
