@@ -3,262 +3,97 @@
   <div class="container">
     <div class="row">
       <div class="section-heading col-sm-12">
-        <h2>EXPERIENCE
+        <h2>PROJECTS
         <a rel="me" href="{{ site.url }}/Barzin_Moridian_Curriculum_Vitae.pdf" title="PDF Curriculum Vitae"><i class="fa fa-file-pdf-o"></i></a></h2>
-        <div class="text-muted">Here I'm listing some of the projects that I've worked on as parts of my professional career.</div>
+        <p class="text-muted">You can find some of my projects below. I'm currently working on a reinforcement learning pet project that will add to this list in future.</p>
       </div>
     </div>
-    <div class="row">
+    
     <hr>
       <!-- ////////////Start of experience///////////// -->
       
-        <h3 class="col-md-3 date">
-          Jan 2015 until today
-        </h3>
-        <div class="col-md-9 experience">
-          <h3 class="service-heading">Robotics Research Engineer &amp Lab Manager</h3>
-          <div class="location">@Nonlinear and Autonomous Systems Laboratory (<a href="http://me.sites.mtu.edu/mahmoudian/">NasLab</a>)
-          </div>
-          <div class="description">
-            <p>This is a research lab within Michigan Tech where we put our energy and knowledge on development and control of autonomous systems.</p>
-          </div>
-          <div class="project">
-            <hr>
-            <h4>Path planning algorithm development</h4>
-            <p>In this project I made a navigation module that uses the readings from a Lidar sensor to perform path planning in highly dynamic environments. The navigation module evaluates the environment to see if there are any Lidar reading indicating that an obstacle is on the way to its target. If there isn't any obstacle then perfect. But if there is one or more obstacles, then some algorithms are called to decide on the best temporary destination (I call it subgoal here) to go to before moving towards the ultimate destination. The algorithms run repeatedly, meaning that a different subgoal might get chosen before the robot reaches the first subgoal. The algorithm might even choose to move to a different subgoal after it has reached the first one and before moving towards the ultimate destination, and so on. The path planning module is designed in a way to take the robots dimensions in consideration which results in higher level of reliability for robots of different sizes.</p>
-            <div class="row">
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/indoor.png"><img src="{{site.url}}/img/indoor.png"></a><p class="text-muted">Simulating the path planning algorithm in a concave, corridor-like type of environment.</p>
-              </div>
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/outdoor.png"><img src="{{site.url}}/img/outdoor.png"></a><p class="text-muted">Simulating the algorithm in an environment similar to outdoors.</p>
-              </div>
-              <div class="clearfix"></div>
-              <div class="col-sm-6">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/nGpb8FjvCTw" frameborder="0" allowfullscreen></iframe><p class="text-muted">Testing the algorithm on robots.</p>
-              </div>
-            </div>
-          </div>
-          <div class="project">
-            <hr>
-            <h4>Autonomous Mobile Microgrid</h4>
-            <p>The objective of this project was to make a group of autonomous mobile robots to move to a desired area, setup all the electrical nodes (generators, renewable energy sources, converters, batteries, etc.) that was carried by robots or the ones that are available in the area. The system would make electrical connection between these electrical nodes and make an electrical network to provide energy to the power loads in the area without human intervention. This network doesn't need to be connected to the main power grid and can operate independently (called island mode). In summary the system was designed to establish a microgrid in a remote area autonomously. For this project we had to design electrical connections to make it easy for the robots to establish electrical connections without the need for complex mechanisms, algorithms, or human operators. We then implemented all the tools on multiple robots and made a system that makes sure that all the robots can collaborate together to accomplish the mission while each robot is performing a separate task.</p>
-            <div class="row">
-              <!-- IMAGE SAMPLE -->
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/schematic_for_three2.jpg"><img src="{{site.url}}/img/schematic_for_three2.jpg"></a>
-                <p class="text-muted">An example of how robots can establish a network of two interconnected microgrids. The nice thing about such scenarios is that one can disconnect and connect in a new way. So the network is reconfigurable.</p>
-              </div>
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/MobileMicrogrid.png"><img src="{{site.url}}/img/MobileMicrogrid.png"></a>
-                <p class="text-muted">If our system wants to connect a microgrid to a let's say communication tower, the end result would look something like this.</p>
-              </div>
-              <!-- END OF IMAGE SAMPLE -->
-              <div class="clearfix"></div>
-              <!-- VIDEO SAMPLE -->
-              <div class="col-sm-6">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/7fPMHeMCfXE" frameborder="0" allowfullscreen></iframe>
-                <p class="text-muted">This is a test scenario without having the cabling/connection system.</p>
-              </div>
-              <!-- END OF VIDEO SAMPLE -->
-            </div>
-          </div>
-          <div class="project">
-            <hr>
-            <h4>Automated Planning of Persistent Missions</h4>
-            <p>In many robotic missions, specially the ones that involve hard to reach environments such as underwater, energy is a great concern. For example, even the high-end autonomous underwater vehicles (AUV) can only operate for few hours. The operation limitation applies to many types of robots in general. The robots need to refuel or charge batteries which is a time and money consuming operation and also requires human intervention. To improve autonomous mission persistence for robots, the amount of time that they can operate independently should increase. The proposed system can drastically improve the operation time, make persistent missions for many types of robots possible, and open the door for robots that can operate and re-energize themselves completely independently. As the result of this project, given the map of a mission area, a developed planning software generates the optimal paths for working robots and service robots (the ones that recharge/refuel the working robots) and also the optimal location for stationary charger. A mission performed in this manner has much better energy efficiency and makes it possible to perform robotic missions for very long periods of time. The hardware implementation of the project is in development. Below are some of the experiments that we had with mission optimization at early stages of the project. We assume a map is given and we need to strategically place charging station(s) in the area. We take speed, battery capacity, number of chargers, number of robots, etc. into consideration to generate trajectories. If the trajectory is predefined then we generate trajectories with minimal modification. For example, the images below show a predefined lawn mower trajectory which are modified as little as possible. But, if we get to plan the trajectory completely, then everything gets interesting and that is what we are working on.</p>
-            <div class="row">
-              <!-- IMAGE SAMPLE -->
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/one_robot_one_charger.bmp"><img src="{{site.url}}/img/one_robot_one_charger.bmp"></a>
-                <p class="text-muted">Here is what happens when we have one charger for one robot.</p>
-              </div>
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/one_robot_three_charger.bmp"><img src="{{site.url}}/img/one_robot_three_charger.bmp"></a>
-                <p class="text-muted">Increasing the number of chargers to 3.</p>
-              </div>
-              <div class="clearfix"></div>
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/two_robot_one_charger.bmp"><img src="{{site.url}}/img/two_robot_one_charger.bmp"></a>
-                <p class="text-muted">Here is what happens if we want to share one charger between two robots.</p>
-              </div>
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/two_robot_three_charger.png"><img src="{{site.url}}/img/two_robot_three_charger.png"></a>
-                <p class="text-muted">And sharing three chargers between two robots.</p>
-              </div>
-              <!-- END OF IMAGE SAMPLE -->
-            </div>
-          </div>
-        </div>
-        <hr>
+    <h3>Agile Path Planning</h3>
+    <p>Developed a simulation environment first to be able to develop the path planning algorithm. Then coded the path planning algorithm in Python to use on ROS. Validated on ground robots.</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/b8EiXVZtlZA" frameborder="0" allowfullscreen></iframe>
+    <p class="text-muted">Path planning simulation 1</p><br/>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bfY62sTenhw" frameborder="0" allowfullscreen></iframe>
+    <p class="text-muted">Path planning simulation 2</p><br/>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nGpb8FjvCTw" frameborder="0" allowfullscreen></iframe>
+    <p class="text-muted">Ground robot obstacle avoidance</p><br/>
+
+
+    <h3>Autonomous Mobile Microgrid</h3>
+    <p>Engineered multi-robot system capable of establishing small electrical power grids collaboratively in unknown environments</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/EMrTS7vy_Dg" frameborder="0" allowfullscreen></iframe>
+    <p class="text-muted">Single robot with obstacles</p><br/>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-FG4XPQIedE" frameborder="0" allowfullscreen></iframe>
+    <p class="text-muted">Two robots</p><br/>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/46rIWmHRX20" frameborder="0" allowfullscreen></iframe>
+    <p class="text-muted">Two robots (top view)</p><br/>
+
+    <h3>Motion Capture Camera System API</h3>
+    <p>Developed an API for Qualisys motion capture system used for indoor localization which communicates states over TCP/IP.</p>
+    <a href="https://github.com/BarzinM/qualisys-rt">https://github.com/BarzinM/qualisys-rt</a><br/><br/>
+
+    <h3>Bounded Path Tracking</h3>
+    <p>Achieved %25 improvement on lateral error and %30 on trajectory traversing time in ground robot navigation by adding fuzzy logic and velocity control to the control architecture.</p>
+    <a href="https://drive.google.com/uc?export=view&id=0B_Me-4UEvsYqZWZyT0lwbWVXTms"><img width="560" src="https://drive.google.com/uc?export=view&id=0B_Me-4UEvsYqZWZyT0lwbWVXTms"></a>
+    <p class="text-muted">After</p><br/>
+    <a href="https://drive.google.com/uc?export=view&id=0B_Me-4UEvsYqZ1hEM3AtUGpBdDQ"><img width="560" src="https://drive.google.com/uc?export=view&id=0B_Me-4UEvsYqZ1hEM3AtUGpBdDQ"></a>
+    <p class="text-muted">Before</p><br/>
+    <a href="https://drive.google.com/uc?export=view&id=0B_Me-4UEvsYqZ2FNcHZVVm1zQ1k"><img width="560" src="https://drive.google.com/uc?export=view&id=0B_Me-4UEvsYqZ2FNcHZVVm1zQ1k"></a>
+    <p class="text-muted">Left: After, Right: Before</p><br/>
+
+    <h3>Autonomous Aerial Robot Navigation</h3>
+    <p>Developed flight management system in ROS using Python for aerial robots that automatically controls the take-off, trajectory following, target following, and landing.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/e9x_qUOLGjg" frameborder="0" allowfullscreen></iframe>
+    <p class="text-muted">Target landing</p><br/>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/so8KNrETquw" frameborder="0" allowfullscreen></iframe>
+    <p class="text-muted">Target following (target is remotely controlled)</p><br/>
       
-      <!-- ////////////End of experience///////////// -->
-      <!-- ////////////Start of experience///////////// -->
-      
-        <h3 class="col-md-3 date">
-          Fall 2012 - End of 2014
-        </h3>
-        <div class="col-md-9 experience">
-          <h3 class="service-heading">Robotics Graduate Researcher &amp Team Lead of Autonomous Ground Vehicles group</h3>
-          <div class="location">@Nonlinear and Autonomous Systems Laboratory (<a href="http://me.sites.mtu.edu/mahmoudian/">NasLab</a>)
-          </div>
-          <div class="description">
-            <p>I worked here while I was getting my M.Sc. in Mechanical Engineering. My education was focused on dynamic systems and how to reliably control them. Working here helped me see the advantages of focusing on programming to make more reliable control systems.</p>
-          </div>
-          <div class="project">
-            <hr>
-            <h4>Autonomous Mobile Microgrid Proof of Concept</h4>
-            <p>This project was the start of autonomous mobile microgrid project that I did later on. In this one we were still figuring out how we can use robots for energy solutions. We were experimenting with different ideas and components. Finally, we made a system comprised of two small National Instruments robots that made a small electric network without human intervention.</p>
-            <div class="row">
-              <div class="col-sm-6">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/k0tLXF5Rl6M?list=PLkMYgm8PFAwYqB8ZoOA1JWI159sfrDKTG" frameborder="0" allowfullscreen></iframe>
-                <p class="text-muted"></p>
-              </div>
-              <div class="col-sm-6">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/vEzUub5z3Fc?list=PLkMYgm8PFAwYqB8ZoOA1JWI159sfrDKTG" frameborder="0" allowfullscreen></iframe>
-                <p class="text-muted"></p>
-              </div>
-            </div>
-          </div>
-          <div class="project">
-            <hr>
-            <h4>Navigation for Small Ground Robots</h4>
-            <p>The problem was to develop a set of algorithms that can use a single infrared (IR) sensor to understand their environment and navigate while avoiding obstacles. We used Dani robots from National Instruments and the algorithms were developed in LabView.</p>
-            <div class="row">
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/DaNI.png"><img src="{{site.url}}/img/DaNI.png"></a>
-                <p class="text-muted">The robots that were programmed to do power network establishment.</p>
-              </div>
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/IR_data.png"><img src="{{site.url}}/img/IR_data.png"></a>
-                <p class="text-muted">Readings from IR sensor installed on a servo was used for path planning.</p>
-              </div>
-            </div>
-          </div>
-          <div class="project">
-            <hr>
-            <h4>Autonomous Rough Terrain Vehicle</h4>
-            <p>In this project we had a huge and heavy tracked vehicle that we wanted to make a ground robot out of. We didn't ever weight it but our guess was somewhere around 700-800 lbs. We installed electric motors, motor controller, batteries, a xPC Target machine for control, IMU, and a Lidar. It was a chance to play around with communication protocols, signal processing, and packet parsing for different sensors and modules. We aren't using the vehicle that much these days but it was very exciting to work with it back then.</p>
-            <div class="row">
-              <!-- IMAGE SAMPLE -->
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/artv.jpg"><img src="{{site.url}}/img/artv.jpg"></a>
-                <p class="text-muted">In this image shows the body of the tracked vehicle. I guess it's about 1.5 m (~ 5 ft) long.</p>
-              </div>
-              <!-- END OF IMAGE SAMPLE -->
-              <!-- IMAGE SAMPLE -->
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/artv2.jpg"><img src="{{site.url}}/img/artv2.jpg"></a>
-                <p class="text-muted">The inside of it is visible in this image.</p>
-              </div>
-              <!-- END OF IMAGE SAMPLE -->
-              <div class="clearfix"></div>
-              <!-- IMAGE SAMPLE -->
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/artv3.jpg"><img src="{{site.url}}/img/artv3.jpg"></a>
-                <p class="text-muted">This is the brain, a xPC target machine.</p>
-              </div>
-              <!-- END OF IMAGE SAMPLE -->
-              <!-- VIDEO SAMPLE -->
-              <div class="col-sm-6">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/3VDCosmrTKU" frameborder="0" allowfullscreen></iframe>
-                <p class="text-muted">Back then we were trying to make it do obstacle avoidance with a single sonar sensor.</p>
-              </div>
-              <!-- END OF VIDEO SAMPLE -->
-            </div>
-          </div>
-          <div class="project">
-            <hr>
-            <h4>Linux Driver for UM7 IMU</h4>
-            <p>In this project I was trying to make an interface with a UM7 IMU which we had a few of in the lab. It was able to read data, send commands, and modify the internal configurations. It was fun writing the code and challenging my programming skills.</p>
-            <div class="row">
-              <!-- IMAGE SAMPLE -->
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/UM7.jpg"><img src="{{site.url}}/img/UM7.jpg"></a>
-                <p class="text-muted">This is the sensor which is quite small (2cm x 2cm). It has triaxial rate gyro, accelerometer, and magnetometer.</p>
-              </div>
-              <!-- END OF IMAGE SAMPLE -->
-            </div>
-          </div>
-        </div>
-        <hr>
-      
-      <!-- ////////////End of experience///////////// -->
-      <!-- ////////////Start of experience///////////// -->
-      
-        <h3 class="col-md-3 date">
-          Fall 2012 - Summer 2013
-        </h3>
-        <div class="col-md-9 experience">
-          <h3 class="service-heading">Controls Gradute Researcher</h3>
-          <div class="location">@Energy Mechatronics Lab (<a href="http://www.me.mtu.edu/~mahdish/EML.html">EML</a>)
-          </div>
-          <div class="description">
-            <p>I worked here for a relatively short time but learned a lot about controls and got my hands on a real-world problem to solve.</p>
-          </div>
-          <div class="project">
-            <hr>
-            <h4>State Estimation and Parameter Adaptation for Building Predictive Control</h4>
-            <p>Heating, ventilation and air-conditioning (HVAC) systems consume over 60 percent of energy in buildings and over 92 percent of energy in commercial buildings. Energy-optimal operation of HVAC systems can significantly reduce building energy usage, decrease peak electrical demand, and lower building carbon dioxide emissions. To achieve this, we use a history of available information and use optimization methods to generate a mathematical model that represents the behavior of a given building's HVAC system with minimum error. After this step and having an initial model, the information from heating, cooling, ventilation, and sensing systems are gathered repeatedly and with the use of a nonlinear model-based filter (extended or unscented Kalman filter) we continuously update the coefficients in our equations, keeping them accurate as the changes happen to the building (daily changes, seasonal changes, change in behavior of occupants, someone leaves a window open, etc.).</p>
-            <div class="row">
-              <!-- IMAGE SAMPLE -->
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/ekf.png"><img src="{{site.url}}/img/ekf.png"></a>
-                <p class="text-muted">Parameter and state estimation using "Extended" Kalman filter.</p>
-              </div>
-              <!-- END OF IMAGE SAMPLE -->
-              <!-- IMAGE SAMPLE -->
-              <div class="col-sm-6">
-                <a href="{{site.url}}/img/ukf.png"><img src="{{site.url}}/img/ukf.png"></a>
-                <p class="text-muted">Parameter and state estimation using "Unscented" Kalman filter. The state tracking converges much faster compared to the extended version.</p>
-              </div>
-              <!-- END OF IMAGE SAMPLE -->
-            </div>
-          </div>
-        </div>
-      
-      <!-- ////////////End of experience///////////// -->
-    </div>
+    <h3>Multi-Robot Mission Optimization with Respect to Overall Energy</h3>
+    <p>Developed automatic mission designer software to generate persistent missions.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yU9ecnXXE7o" frameborder="0" allowfullscreen></iframe>
+    <p class="text-muted">Illustration of the idea</p><br/>
+    <a href="https://drive.google.com/uc?export=view&id=0B_Me-4UEvsYqV1dyWmp1ajc0ZTg"><img width="560" src="https://drive.google.com/uc?export=view&id=0B_Me-4UEvsYqV1dyWmp1ajc0ZTg"></a>
+    <p class="text-muted">One robot and one mobile charger</p>
+    <a href="https://drive.google.com/uc?export=view&id=0B_Me-4UEvsYqNkdrQWZZelBSRlU"><img width="560" src="https://drive.google.com/uc?export=view&id=0B_Me-4UEvsYqNkdrQWZZelBSRlU"></a>
+    <p class="text-muted">Two robots and one mobile charger</p>
+    <a href="https://drive.google.com/uc?export=view&id=0B_Me-4UEvsYqT0Y0RWVKd3BGZEk"><img width="560" src="https://drive.google.com/uc?export=view&id=0B_Me-4UEvsYqT0Y0RWVKd3BGZEk"></a>
+    <p class="text-muted">Three robots and four static chargers</p><br/> 
+
+    <h3>Making a New Robot</h3>
+    <p>Performed system engineering for repurposing a tracked vehicle into a robot using off-the-shelf components. Established communication between sensors, actuators, and embedded systems.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3VDCosmrTKU" frameborder="0" allowfullscreen></iframe>
+    <p class="text-muted">Testing a simple obstacle avoidance</p><br/>
+
+
+    <h3>CAD</h3>
+    <p>Designed and prototyped mechanical and electrical components for supporting mechanisms, sensors, electronics, and electrical power transfer on robots. An example that I'm proud of is the blind mating 5-conductor electrical connectors with locking mechanism.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0t_wp-hcM_M" frameborder="0" allowfullscreen></iframe><br/><br/>
+    
+
+    <h3>Dynamip</h3>
+    <p>Developed open-source tool that keeps track of dynamic IP of any number of remote Linux systems to enable remote login over the Internet without need for static IP.</p>
+    <a href="https://github.com/BarzinM/dynamip">https://github.com/BarzinM/dynamip</a><br/><br/>
+
+    <h3>Gasoline Powered VTOL Drone</h3>
+    <p>Prototyped gasoline powered flying vehicle with a heavy aluminum frame that is estimated to be able to lift an extra 70~100 lbs load.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/xoiPacHJ7r8" frameborder="0" allowfullscreen></iframe>
+    <p class="text-muted">Restrained system test</p><br/>
+
+
+    <h3>Random Experiments with Image Processing</h3>
+    <p>Developed flight management system in ROS using Python for aerial robots that automatically controls the take-off, trajectory following, target following, and landing.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2XXtT_zAwis" frameborder="0" allowfullscreen></iframe>
+    <p class="text-muted">Object tracking</p><br/>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WJ9G7oSeyv8" frameborder="0" allowfullscreen></iframe>
+    <p class="text-muted">Marker localization</p>
+
+
   </div>
 </section>
 
 
 
-
-
-{% comment %}
-      <!-- ////////////Start of experience///////////// -->
-      
-        <h3 class="col-md-3 date">
-          TIME
-        </h3>
-        <div class="col-md-9 experience">
-          <h3 class="service-heading">TITLE</h3>
-          <div class="location">@WHERE (<a href="LINK">LINK</a>)
-          </div>
-          <div class="description">
-            <p>DESCRIPTION</p>
-          </div>
-          <div class="project">
-            <hr>
-            <h4>PROJECT TITLE</h4>
-            <p>PROJECT DESCRIPTION</p>
-            <div class="row">
-              <!-- IMAGE SAMPLE -->
-              <div class="col-sm-6">
-                <a href="IMAGE LINK"><img src="IMAGE LINK"></a>
-                <p class="text-muted">DESCRIPTION</p>
-              </div>
-              <!-- END OF IMAGE SAMPLE -->
-              <!-- VIDEO SAMPLE -->
-              <div class="col-sm-6">
-                <iframe width="560" height="315" src="YOUTUBE LINK" frameborder="0" allowfullscreen></iframe>
-                <p class="text-muted">DESCRIPTION</p>
-              </div>
-              <!-- END OF VIDEO SAMPLE -->
-            </div>
-          </div>
-        </div>
-      
-      <!-- ////////////End of experience///////////// -->
-{% endcomment %}
