@@ -23,15 +23,9 @@ color:
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: View LinkedIn Profile
-    fa-title: linkedin
-    url: https://www.linkedin.com/in/barzinmoridian
   - title: View GitHub Profile
     fa-title: github
     url: https://github.com/BarzinM
-  - title: Go to YouTube Channel
-    fa-title: youtube
-    url: http://www.youtube.com/playlist?list=PLkMYgm8PFAwYqB8ZoOA1JWI159sfrDKTG
 
 
 # Postal address (add as many lines as necessary)
