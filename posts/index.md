@@ -5,7 +5,7 @@ excerpt: "An archive of articles sorted by date."
 ---
 
 <section>
-	<h1 class="section-heading">POSTS</h1>
+	<h1 class="section-heading">Posts</h1>
 	<p class="section-subheading text-muted">An archive of articles sorted by date.</p>
 	<div class="entry-content">
 		<div class="row">
