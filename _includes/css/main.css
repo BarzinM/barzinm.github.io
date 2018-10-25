@@ -41,7 +41,8 @@
 }
 body {
     font-size: 1rem;
-    font-family: 'Open Sans',"Source Sans Pro", sans-serif;
+    /*font-family: 'Open Sans',"Source Sans Pro", sans-serif;*/
+    font-family: "Montserrat", Arial, sans-serif;
     color: #000;
 }
 section{
@@ -125,18 +126,18 @@ header {
 }
 header .intro-text {
     color:#FFF;
-    font-family: 'Indie Flower';
     display:table;
     margin:0 auto;
     padding:3em 0;
 }
 header .intro-text .intro-heading {
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 200;
 }
 header .intro-text .intro-lead-in {
-    margin-left:2em;
+    margin-left:.5em;
     font-size: 2rem;
+    font-weight: 100;
 }
 
 #contact {
