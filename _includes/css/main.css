@@ -4,6 +4,13 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+html, body {
+
+    background: #172b39;
+    margin: 0;
+    min-height: 100%;
+}
+
 .topbar{
     overflow: hidden;
     background-color: #222;
@@ -40,14 +47,12 @@
   content: "\f09b";
 }
 body {
-    font-size: 1rem;
-    /*font-family: 'Open Sans',"Source Sans Pro", sans-serif;*/
-    font-family: "Montserrat", Arial, sans-serif;
-    color: #000;
+    /*font-family: "Montserrat", Arial, sans-serif;*/
+    font-family: 'Roboto Mono', monospace;
 }
-section{
+/*section{
     padding:4em 1em;
-}
+}*/
 img{
     max-width: 100%;
 }
@@ -60,11 +65,7 @@ section-heading{
 .experience{
     margin-bottom:3em;
 }
-p
-{
-    text-align:justify;
-    margin-bottom:1em;
-}
+
 .location{
     color: #000;
     font-size: 1.2em;
@@ -99,11 +100,12 @@ p
 .text-primary {
     color: #{{site.color.primary}};
 }
-a, a:hover, a:active, a.active {
+a, a:hover, a:active, a.active, a:visited {
     outline: 0;
+    color: #ff7979;
 }
 h1, h2, h3, h4, h5, h6 {
-    color: #{{site.color.secondary}};
+    /*color: #{{site.color.secondary}};*/
 }
 h1{
     font-size:3rem;
@@ -122,22 +124,27 @@ h4 {
 }
 header {
     text-align: left;
-    background-color: #{{site.color.secondary}};
+    /*background-color: #{{site.color.secondary}};*/
 }
 header .intro-text {
-    color:#FFF;
+    /*color:#FFF;*/
     display:table;
-    margin:0 auto;
-    padding:3em 0;
+    margin-bottom:1.5rem;
+    /*padding:3em 0;*/
 }
 header .intro-text .intro-heading {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 200;
+    font-family: "Montserrat", Arial, sans-serif;
+
 }
 header .intro-text .intro-lead-in {
-    margin-left:.5em;
+    /*margin-left:.5em;*/
+    opacity: 0.5;
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 200;
+    font-family: "Montserrat", Arial, sans-serif;
+
 }
 
 #contact {
@@ -196,10 +203,14 @@ img::selection {
 img::-moz-selection {
     background: 0 0;
 }
-section.success {
-    color: #fff;
-    background: #{{site.color.primary}};
-    text-align:justify;
+section.minimal {
+    font-size:.8rem;
+    height: 100%;
+    /*color: #fff;*/
+    color: #c4e3ff;
+    /*background: #{{site.color.primary}};*/
+    /*text-align:justify;*/
+
 }
 #posts {
     width: 100%;
@@ -233,9 +244,9 @@ section.success {
     text-align: right;
 }
 hr{
-    border:.1em solid #ddd;
-    border-radius: 1em;
-    margin:1em 0;
+    border:.05em dotted;
+    /*border-radius: 1em;*/
+    /*margin:1em 0;*/
 }
 @media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ 
     html {
@@ -266,4 +277,50 @@ hr{
     html {
         font-size:20px;
     }
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary{
+  outline:none;
+  /*margin-bottom:.1rem;*/
+  font-size:.9rem;
+}
+
+summary:before {
+  content: "[+]"; 
+  font-weight: bold; 
+  color: #ff7979;
+  margin-left:-5px;
+
+}
+details[open] summary:before {
+  content: "[-]";
+}
+
+summary p{
+
+}
+
+/*.summary-header{
+    display: inline-block;
+}*/
+
+.container {
+  max-width: 650px;
+}
+
+p{
+    /*font-size: .8rem;*/
+}
+
+.details .row{
+    /*height: 3rem;*/
+    padding-bottom:.5rem;
+}
+
+.details .col-md-3{
+    opacity: .5;
 }
