@@ -6,7 +6,7 @@
 
 html, body {
 
-    background: #172b39;
+    background: #111D2E;/*#172b39;*/
     margin: 0;
     min-height: 100%;
 }
@@ -207,7 +207,8 @@ section.minimal {
     font-size:.8rem;
     height: 100%;
     /*color: #fff;*/
-    color: #c4e3ff;
+    /*color: #c4e3ff;*/
+    color: #e0e9ff;
     /*background: #{{site.color.primary}};*/
     /*text-align:justify;*/
 
