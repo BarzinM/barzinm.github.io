@@ -1,5 +1,5 @@
-baseurl: http://barzinm.com
-url: http://barzinm.com # http://127.0.0.1:4000/
+baseurl: https://barzinm.com
+url: https://barzinm.com # http://127.0.0.1:4000/
 destination: ./_site
 
 # Site settings
