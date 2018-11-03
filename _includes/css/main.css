@@ -12,9 +12,8 @@ html{
 
 body {
     background: #111D2E;
-    /*min-height: 100%;*/
     padding-bottom: 2em;
-    font-size:13px;
+    font-size:14px;
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -37,54 +36,48 @@ h2 {
 }
 
 section.minimal {
-    /*height: 100%;*/
     color: #d9e4ff;
 }
 
-/*Extra small devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap*/
-
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
-    body{
+    /*body{
         font-size:14px;
-    }
+    }*/
     .container{
-        max-width: 550px;
+        max-width: 500px;
     }
 }
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-    body{
+    /*body{
         font-size:15px;
-    }
+    }*/
     .container{
-        max-width: 690px;
+        max-width: 550px;
     }
 }
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-    body{
+    /*body{
         font-size:16px;
-    }
+    }*/
     .container{
-        max-width: 720px;
+        max-width: 600px;
     }
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-    body{
+    /*body{
         font-size:17px;
-    }
+    }*/
     .container{
-        max-width: 750px;
+        max-width: 650px;
     }
 }
-
-
 
 summary::-webkit-details-marker {
   display: none;
