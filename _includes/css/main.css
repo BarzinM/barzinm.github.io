@@ -1,10 +1,4 @@
-/*!
- * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
-html{
+html {
     /*overflow-y: overlay;*/
     margin-left: calc(100vw - 100%);
     margin-right: 0;
@@ -22,7 +16,7 @@ a, a:hover, a:active, a.active, a:visited {
     color: #ff7979;
 }
 
-h1{
+h1 {
     font-size: 2.4em;
     font-weight: 200;
     font-family: "Montserrat", Arial, sans-serif;
@@ -71,7 +65,7 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-summary{
+summary {
   outline:none;
 }
 
@@ -85,21 +79,21 @@ details[open] summary:before {
   content: "[-]";
 }
 
-details p{
+details p {
     font-size:.9em;
 }
 
-.details{
+.details {
     font-size:.9em;
 }
-.details .row{
+.details .row {
     padding-bottom:.8em;
 }
 
-.mute{
+.mute {
     opacity: .5;
 }
 
-.project_link{
+.project_link {
     display:none;
 }
