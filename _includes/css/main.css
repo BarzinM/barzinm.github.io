@@ -95,5 +95,15 @@ details p {
 }
 
 .project_link {
-    display:none;
+    /*display:none;*/
+    content: "show";
+}
+
+img {
+    min-height:100px;
+    width: auto;
+    height: auto;
+    border: 1px solid #d9e4ff;
+    margin-bottom: 5px;
+    display: block;
 }
