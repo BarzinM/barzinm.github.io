@@ -109,3 +109,12 @@ img {
     display: block;
     /*max-width:100%;*/
 }
+
+
+.gist .blob-code-inner {
+    white-space: pre-wrap!important;
+}
+
+.gist .markdown-body h1 {
+    display: none;
+}
