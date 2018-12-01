@@ -6,7 +6,8 @@ $(document).ready(function () {
     	       $(this).text("show");
 
     	next=$(this).parent().parent().next()
-    	$(next).find('img').map(function(){
+
+    	$(next).find('img').map(function() {
 	    	$(this).attr('src',$(this).data('src'));
     	})
 
