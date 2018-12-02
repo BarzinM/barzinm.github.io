@@ -1,7 +1,0 @@
----
-layout: post
-date:   2014-02-03 23:26:12
-photo: uav.png
-caption_header: Unmanned Aerial Vehicle
-caption: Dynamic system modeling, simulation, and control of unmanned aerial vehicles.
----

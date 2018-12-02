@@ -1,7 +1,0 @@
-{% include css/bootstrap.min.css %}
-{% include css/agency.css %}
-{% include css/demo.css %}
-{% include css/component.css %}
-{% include css/normalize.css %}
-{% include css/print.css %}
-{% include css/main.css %}
