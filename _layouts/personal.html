@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+
+{% include head.html %}
+
+<style type="text/css">
+body {
+	/*min-height: 100%; */
+	padding-bottom: 0
+}
+
+section {
+	/*min-height: 100%*/
+}
+
+.container {
+	min-height: 100vh;
+	background-image:url('background.svg');
+	background-size: cover;
+}
+
+.breadcrumb {
+	padding-bottom: 2em
+}
+</style>
+
+<body style="">
+	<section class="minimal">
+		<div class="container">
+			<nav aria-label="breadcrumb">
+			  <ol class="breadcrumb">
+			    <li class="breadcrumb-item"><a href="{{ site.url }}">Home</a></li>
+			    <li class="breadcrumb-item active" aria-current="page">Personal</li>
+			  </ol>
+			</nav>
+
+		</div>
+	</section>
+</body>
+</html>
