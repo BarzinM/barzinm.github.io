@@ -95,7 +95,7 @@ details p {
 }
 
 .project_link {
-    /*display:none;*/
+    display:none;
     content: "show";
 }
 
