@@ -13,4 +13,26 @@ $(document).ready(function () {
 
     	$(next).toggleClass("hide show");
     });
+
+    $('#form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            dataType: "jsonp",
+            statusCode: {
+                0: function() {
+                    //Success message
+                },
+                200: function() {
+                    //Success Message
+                }
+            },
+            url: "http://docs.google.com/forms/d/e/1FAIpQLSdOvmaG3ca38EO_u2Z61k2m03tv6cBHWZiRBYe-dK5ZP_w8Dw/formResponse",
+            data: {
+                'entry.1114812678': $('#contact_message').val()
+            }
+        });
+        $('#contact_message').val("");
+        $('#contact_message').attr("placeholder", "Message Sent!");
+    })
 });

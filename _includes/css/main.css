@@ -7,11 +7,15 @@ html {
 body {
     background-color: #111c2e;
     padding-bottom: 2em;
-    font-size:15px;
+    font-size: 15px;
     font-family: 'Roboto Mono', monospace;
 }
 
-a, a:hover, a:active, a.active, a:visited {
+a,
+a:hover,
+a:active,
+a.active,
+a:visited {
     outline: 0;
     color: #ff7979;
 }
@@ -22,11 +26,12 @@ h1 {
     font-family: "Montserrat", Arial, sans-serif;
     margin-bottom: 0px;
 }
+
 h2 {
     font-size: 2em;
     font-weight: 200;
     font-family: "Montserrat", Arial, sans-serif;
-    margin-top:0px;
+    margin-top: 0px;
 }
 
 section.minimal {
@@ -35,61 +40,62 @@ section.minimal {
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
-    .container{
+    .container {
         max-width: 500px;
     }
 }
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-    .container{
+    .container {
         max-width: 550px;
     }
 }
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-    .container{
+    .container {
         max-width: 600px;
     }
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-    .container{
+    .container {
         max-width: 650px;
     }
 }
 
 summary::-webkit-details-marker {
-  display: none;
+    display: none;
 }
 
 summary {
-  outline:none;
-  cursor: pointer;
-  width: fit-content;
+    outline: none;
+    cursor: pointer;
+    width: fit-content;
 }
 
 summary:before {
-  content: "[+]"; 
-  font-weight: bold; 
-  color: #ff7979;
+    content: "[+]";
+    font-weight: bold;
+    color: #ff7979;
 }
 
 details[open] summary:before {
-  content: "[-]";
+    content: "[-]";
 }
 
 details p {
-    font-size:.9em;
+    font-size: .9em;
 }
 
 .details {
-    font-size:.9em;
+    font-size: .9em;
 }
+
 .details .row {
-    padding-bottom:.8em;
+    padding-bottom: .8em;
 }
 
 .mute {
@@ -102,7 +108,7 @@ details p {
 }
 
 img {
-    min-height:100px;
+    min-height: 100px;
     /*min-width: 200px;*/
     width: 100%;
     height: auto;
@@ -114,7 +120,7 @@ img {
 
 
 .gist .blob-code-inner {
-    white-space: pre-wrap!important;
+    white-space: pre-wrap !important;
 }
 
 .gist .markdown-body h1 {
@@ -124,4 +130,8 @@ img {
 .breadcrumb {
     border-radius: 0 0 2px 2px;
     background-color: transparent;
+}
+
+form {
+    margin-top:10px;
 }
