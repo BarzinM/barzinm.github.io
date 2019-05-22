@@ -11,7 +11,7 @@ $(document).ready(function () {
 	    	$(this).attr('src',$(this).data('src'));
     	})
 
-    	$(next).toggleClass("hide show");
+    	$(next).toggleClass("hide");
     });
 
     $('#form').on('submit', function(e) {
