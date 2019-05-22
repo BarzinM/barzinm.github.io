@@ -27,7 +27,7 @@ $(document).ready(function () {
                     //Success Message
                 }
             },
-            url: "http://docs.google.com/forms/d/e/1FAIpQLSdOvmaG3ca38EO_u2Z61k2m03tv6cBHWZiRBYe-dK5ZP_w8Dw/formResponse",
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSdOvmaG3ca38EO_u2Z61k2m03tv6cBHWZiRBYe-dK5ZP_w8Dw/formResponse",
             data: {
                 'entry.1114812678': $('#contact_message').val()
             }
