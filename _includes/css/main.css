@@ -67,6 +67,8 @@ summary::-webkit-details-marker {
 
 summary {
   outline:none;
+  cursor: pointer;
+  width: fit-content;
 }
 
 summary:before {
