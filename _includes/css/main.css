@@ -140,3 +140,7 @@ form {
 .hide{
     display: none;
 }
+
+#contact_message, #submit{
+    font-size: inherit;
+}
