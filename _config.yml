@@ -60,7 +60,7 @@ host:    127.0.0.1
 baseurl: "" # does not include hostname
 
 # Outputting
-permalink:     /:categories/:year/:title.html
+permalink:     /:categories/:title.html
 timezone:      null
 
 quiet:    false

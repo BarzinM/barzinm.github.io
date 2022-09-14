@@ -1,3 +1,42 @@
----
-layout: notes
----
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<style type="text/css">
+h2{
+padding-bottom: .5em
+}
+
+hr{
+	border: 1px solid ##d9e4ff;
+	padding-bottom: 2em
+}
+</style>
+
+<body>
+	<section class="minimal">
+		<div class="container" style="max-width: 958px;">
+			<nav aria-label="breadcrumb" style="">
+			  <ol class="breadcrumb">
+			    <li class="breadcrumb-item"><a href="{{ site.url }}">Home</a></li>
+			    <li class="breadcrumb-item active" aria-current="page">Notes</li>
+			  </ol>
+			</nav>
+
+			<h2>Parsing Commandline Arguments in Bash</h2>
+			<script src="https://gist.github.com/BarzinM/eb7e54a178cd3e81d1cdfb71c5524bef.js?file=argument_parsing.md"></script>
+			<script src="https://gist.github.com/BarzinM/eb7e54a178cd3e81d1cdfb71c5524bef.js?file=arg_parsing_example.sh"></script>
+			<hr>
+
+			<h2>Sharing Internet from One Linux Device to Another</h2>
+			<script src="https://gist.github.com/BarzinM/27c2fe468e559982d6634e67d04cf480.js?file=share_internet.md"></script>
+			<script src="https://gist.github.com/BarzinM/27c2fe468e559982d6634e67d04cf480.js?file=share_internet.sh"></script>
+			<hr>
+
+
+		</div>
+	</section>
+</body>
+</html>
+
