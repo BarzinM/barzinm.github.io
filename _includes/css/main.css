@@ -83,12 +83,17 @@ summary:before {
     color: #ff7979;
 }
 
-ul {
+ul.dashed {
     list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
 }
 
-li:before {
+ul.dashed > li:before {
+    display: inline-block;
     content: "-";
+    width: 1em;
+    margin-left: -1em;
 }
 
 details[open] summary:before {
