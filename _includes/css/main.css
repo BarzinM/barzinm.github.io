@@ -83,6 +83,14 @@ summary:before {
     color: #ff7979;
 }
 
+ul {
+    list-style: none;
+}
+
+li:before {
+    content: "-";
+}
+
 details[open] summary:before {
     content: "[-]";
 }
